@@ -1,0 +1,25 @@
+type: ChoiceQuestion
+id: notchiNW1
+value: 10
+shuffle: true
+prompt: |
+    
+    ### ケーブルの規格
+
+    ケーブルの規格で速度10Gbps、マルチモード光ケーブル、距離300mである規格はどれか。<br/>
+    <br/>
+    <br/>
+
+choices:
+
+  - 10GBASE-LR
+  - 10GBASE-T
+  - 10GBASE-ER
+  - 10GBASE-SL
+  - ~CORRECT~ 該当する選択肢は無し
+
+answer_explanation:
+
+    実在する規格として「10GBASE-SR」や「10GBASE-LX4」があげられます。<br/>
+    「10GBASE-LR」、「10GBASE-ER」はシングルモード光ケーブルを利用します。<br/>
+    「10GBASE-SL」は存在しない規格です。<br/>

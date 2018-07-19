@@ -1,0 +1,29 @@
+type: ChoiceQuestion
+id: notchiNW3
+value: 10
+shuffle: true
+prompt: |
+
+    ### OSI参照モデル
+
+    OSI参照モデルの第6層であるものを選択せよ。<br/>
+    <br/>
+    <br/>
+
+choices:
+
+  - ~CORRECT~ プレゼンテーション層
+  - ネットワーク層
+  - セッション層
+  - データリンク層
+  - 該当する選択肢は無し
+
+answer_explanation:
+
+    第7層   アプリケーション層 <br />
+    <b>第6層   プレゼンテーション層</b><br />
+    第5層   セッション層 <br />
+    第4層   トランスポート層 <br />
+    第3層   ネットワーク層 <br />
+    第2層   データリンク層 <br />
+    第1層   物理層 <br />

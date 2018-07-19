@@ -1,0 +1,24 @@
+type: ChoiceQuestion
+id: notchiNW6
+value: 10
+shuffle: true
+prompt: |
+
+    ### ルートサーバを運用組織
+
+    DNSのルートサーバを運用している組織の数はいくつか。<br/>
+    <br/>
+    <br/>
+
+choices:
+
+  - 13
+  - 11
+  - ~CORRECT~ 12
+  - 14
+  - 該当する選択肢は無し
+
+answer_explanation:
+
+    DNSのルートサーバは13(13エントリ)ですが運営している組織は12です。<br/>
+    VeriSignが2つ運営しています。そのため運営している組織は12です。<br/>

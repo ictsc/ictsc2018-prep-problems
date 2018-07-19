@@ -1,0 +1,144 @@
+type: InlineMultiQuestion
+id: ictsc7_network_stp
+value: 30
+prompt: |
+
+    ### スパニングツリープロトコル  
+    
+    <br />  
+    
+    図5の通り、L2スイッチが接続されています。  
+    
+    スパニングツリープロトコル(STP)において、  
+    
+    各スイッチの①～⑩番ポートのルートポート(RP)、指定ポート(DP)、非指定ポート(NDP)を求め、解答してください。  
+    
+    なお、スイッチAはルートブリッジとし、各スイッチのMACアドレスは表5の通りとします。  
+    
+    各スイッチのプライオリティ値はデフォルトで、帯域値を1Gbpsとします。解答の変更はございません。  
+    
+    <br />
+    <br />  
+    
+    <img src="repo:images/ictsc7_network_stp.png">  
+    
+    <br />
+
+    <div style="text-align: center;">  
+    表5 ネットワーク問題1
+    </div>
+
+
+    | 機器名       | MACアドレス                          |  
+    |:-----------|:--------------------------------|  
+    | スイッチA（ルートブリッジ）   | 01:01:02:02:03:03     |  
+    | スイッチB       | 01:01:02:02:04:13      |  
+    | スイッチC       | 01:01:02:02:04:04      |  
+    | スイッチD       | 01:01:02:03:01:01      |  
+
+
+
+
+question: |
+
+    ①: [[choice_1]]  
+    
+    ②: [[choice_2]]  
+    
+    ③: [[choice_3]]  
+    
+    ④: [[choice_4]]  
+    
+    ⑤: [[choice_5]]  
+    
+    ⑥: [[choice_6]]  
+    
+    ⑦: [[choice_7]]  
+    
+    ⑧: [[choice_8]]  
+    
+    ⑨: [[choice_9]]  
+    
+    ⑩: [[choice_10]]
+
+answers:
+
+    choice_1:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - ~CORRECT~ RP
+        - DP
+        - NDP
+
+    choice_2:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - RP
+        - ~CORRECT~ DP
+        - NDP
+
+    choice_3:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - RP
+        - ~CORRECT~ DP
+        - NDP
+
+    choice_4:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - ~CORRECT~ RP
+        - DP
+        - NDP
+
+    choice_5:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - RP
+        - ~CORRECT~ DP
+        - NDP
+
+    choice_6:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - RP
+        - DP
+        - ~CORRECT~ NDP
+
+    choice_7:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - RP
+        - DP
+        - ~CORRECT~ NDP
+
+    choice_8:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - RP
+        - ~CORRECT~ DP
+        - NDP
+
+    choice_9:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - ~CORRECT~ RP
+        - DP
+        - NDP
+
+    choice_10:
+        type: ChoicesAnswer
+        required: True
+        choices:
+        - RP
+        - ~CORRECT~ DP
+        - NDP

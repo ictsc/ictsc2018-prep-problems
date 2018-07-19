@@ -1,0 +1,71 @@
+type: TextQuestion
+id: ictsc7logfile
+value: 5
+widget: textarea
+prompt: |
+
+    # LogFile
+
+    あなたはトラコン社(http://icttoracon.net/) のwebサーバを監視しています。
+    ある日、急激な負荷上昇を確認しました。
+    連絡を行ったところ、お客様から連絡がありどうやらwebページがニュースサイトに上がったらしくアクセスが急増しているそうです。
+    また、apacheのエラーログを確認したところ、下記のようなエラーログを確認したとの情報をいただきました。
+
+    ```server reached MaxClients setting, consider raising the MaxClients setting```
+
+    お客様では復旧の方法がわからないため、今後も同様の障害が発生したことを考慮した復旧の手順を教えてほしいと連絡をもらっています。
+    なお、お客様からは現状の3倍くらいの設定でもメモリ、CPUは大丈夫だろうとのことです。
+    復旧するための手順をテキストベースで作成してください。
+
+    <br />
+
+    ### 解答テンプレート
+  
+    内容は基本自由ですが、どのようなコマンドで作業を行ったかを必ず記入してください。
+
+
+    ### 手順作成例
+
+    手順は下記のような記述で結構です。
+    簡単な説明と、実行するコマンドを記述してください。
+    
+    1. ファイル一覧を確認
+    
+    ```ls -la | grep test.md```
+
+    2. ファイルの作成
+    
+    ```touch test.md```
+
+    3. ファイルが作成されたことを確認
+    
+    ```ls -la |grep test.md```
+
+
+    ### 前提条件
+    
+    お客様のサーバ情報は下記となっています。
+
+    - CentOS 6系
+    - Apache 2.2系
+    - CPU: 4core
+    - memory: 16GB
+
+    - httpdはyumでインストールされている
+    - MPMはpreforkを利用している
+    - httpd.confにはvirtualhostの設定を追加しただけとのこと
+    
+    - 設定ファイル
+      - 基本設定:/etc/httpd/conf/httpd.conf
+      - アクセスログ: /var/log/httpd/access_log
+      - エラーログ: /var/log/httpd/error_log
+
+
+
+
+choices:
+
+  - ~CORRECT~ Upper Hessenberg form
+  - Diagonal
+  - Schur form
+  - Tridiagonal form

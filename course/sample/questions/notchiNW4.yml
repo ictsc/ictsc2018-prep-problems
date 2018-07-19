@@ -1,0 +1,26 @@
+type: ChoiceQuestion
+id: notchiNW4
+value: 10
+shuffle: true
+prompt: |
+
+    ### ルーティング情報の追加
+
+    Windowsで10.0.0.1/32宛の通信を192.168.30.254に送信するルーティング情報の追加を行いたい。<br/>
+    適切なコマンドは以下のうちどれか。<br/>
+    <br/>
+    <br/>
+
+choices:
+
+  - route add 10.0.0.1 255.255.255.255 192.168.30.254
+  - route add -net 10.0.0.1 gw 192.168.30.254 netmask 255.255.255.255
+  - ~CORRECT~ route add 10.0.0.1 mask 255.255.255.255 192.168.30.254
+  - route add 10.0.0.1 255.255.255.255 gw 192.168.30.254
+  - 該当する選択肢は無し
+
+answer_explanation:
+
+    1つ目の選択肢にはサブネットマスクの入力の前に「mask」を記述していません。<br/>
+    2つ目の選択肢はLinuxでの記述方法です。<br/>
+    4つ目の記述方法はWindowsでもLinuxでも成立しません。<br/>

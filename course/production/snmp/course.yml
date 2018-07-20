@@ -1,8 +1,8 @@
 chunks:
 
 -
-    title: "ICTSC2018 １次予選"
-    id: ictsc2018-pre1
+    title: "ICTSC2018 １次予選 SNMPについて"
+    id: ictsc2018-pre1-snmp
     rules:
     -
         if_after: end_week 3
@@ -70,8 +70,8 @@ chunks:
 
         ```
         【宛先】yosen@icttoracon.net
-        【件名】[ICTSC2018-予選1 コース名(ジャンル名?)][問題番号◯] 質問
-        　　　※ 特定の設問に属さない質問は「[ICTSC2018-予選1 コース名(ジャンル名?) 問題名][共通] 質問」
+        【件名】[ICTSC2018-予選1 コース名(ジャンル名?SNMP)][問題番号◯] 質問
+        　　　※ 特定の設問に属さない質問は「[ICTSC2018-予選1 コース名(ジャンル名?SNMP) 問題名][共通] 質問」
         【本文】質問内容を記載
         ```
 

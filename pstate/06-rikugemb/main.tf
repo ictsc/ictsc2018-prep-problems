@@ -3,6 +3,11 @@ variable "problem" {
     default = "06"
 }
 
+# チーム番号
+ variable "TEAM_LOGIN_ID" {
+    default = "PUT_TEAM_NUMBER_HERE"
+ }
+
 # vnc admin password
 variable "VNC_SERVER_PASSWORD" {
     default = "PUT_YOUR_PASSWORD_HERE"

@@ -16,6 +16,13 @@
    description = "VNCサーバ(踏み台)初期化スクリプト"
  }
 
+
+ resource sakuracloud_note "vnc-webrtc" {
+   name = "vnc-webrtc"
+   class = "shell"
+   content = "${file("vnc.sh")}"
+ }
+
  # vnc archive
  data sakuracloud_archive "vnc-archive" {
     name_selectors = ["VNC", "IMG" , "V3"]
@@ -30,7 +37,7 @@
  resource sakuracloud_disk "vnc-server-disk" {
     name              = "vnc-server-disk-${var.problem}"
     source_archive_id = "${data.sakuracloud_archive.vnc-archive.id}"
-    note_ids          = ["${sakuracloud_note.vnc-init.id}"]
+    note_ids          = ["${sakuracloud_note.vnc-init.id}","${sakuracloud_note.vnc-webrtc.id}"]
  }
 
  # servers
@@ -55,12 +62,12 @@
   }
 
   resource sakuracloud_disk "08-server-disk" {
-     name              = "08-サーバー名"
+     name              = "08-server"
      source_archive_id = "${data.sakuracloud_archive.08-server-archive.id}"
   }
 
-  resource sakuracloud_server "??" {
-     name            = "??"
+  resource sakuracloud_server "08-server-server" {
+     name            = "08-server-server"
      core            = 1
      memory          = 1
      disks           = ["${sakuracloud_disk.08-server-disk.id}"]

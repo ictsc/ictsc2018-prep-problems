@@ -18,7 +18,7 @@ description = "VNCサーバ(踏み台)初期化スクリプト"
 
 # vnc archive
 data sakuracloud_archive "vnc-archive" {
-name_selectors = ["VNC", "IMG" , "V2"]
+name_selectors = ["VNC", "IMG" , "V3"]
 }
 
 # switch

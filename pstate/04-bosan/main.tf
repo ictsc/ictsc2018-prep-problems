@@ -19,7 +19,7 @@
 
  # vnc archive
  data sakuracloud_archive "vnc-archive" {
-    name_selectors = ["VNC", "IMG" , "V2"]
+    name_selectors = ["VNC", "IMG" , "V3"]
  }
 
  # switch

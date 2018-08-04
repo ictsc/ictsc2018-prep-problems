@@ -8,6 +8,10 @@
     default = "PUT_TEAM_NUMBER_HERE"
  }
 
+variable "WEBHOOK_URL" {
+  default = "https://hooks.slack.com/services/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"
+}
+
  # vnc admin password
  variable "VNC_SERVER_PASSWORD" {
     default = "PUT_YOUR_PASSWORD_HERE"
@@ -52,6 +56,17 @@
  output "vnc_global_ip" {
     value = "${sakuracloud_server.vnc-server.ipaddress}"
  }
+
+# simple_monitor
+resource sakuracloud_simple_monitor "vnc-monitor" {
+  target = "${sakuracloud_server.vnc-server.ipaddress}"
+  health_check = {
+    protocol   = "ping"
+    delay_loop = 60
+  }
+  notify_slack_enabled = true
+  notify_slack_webhook = "${var.WEBHOOK_URL}"
+}
 
  ### 以下自由に書く
 

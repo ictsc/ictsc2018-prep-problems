@@ -1,5 +1,5 @@
 type: TextQuestion
-id: 05-q2
+id: 05_q2
 value: 10
 shuffle: true
 widget: textarea
@@ -12,6 +12,8 @@ prompt: |
         
         なんでかVMが起動できないとき、見ないといけないログファイルはどれ？（記述式）
 
+answers:
+    - <plain>Answer
 
 choices:
 

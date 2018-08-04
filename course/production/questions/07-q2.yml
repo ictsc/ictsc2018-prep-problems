@@ -1,5 +1,5 @@
 type: TypeQuestion
-id: 07-q2
+id: 07_q2
 value: 10
 shuffle: true
 prompt: |

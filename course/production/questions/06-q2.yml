@@ -1,5 +1,5 @@
 type: ChoiceQuestion
-id: 06-q2
+id: 06_q2
 value: 10
 shuffle: true
 prompt: |

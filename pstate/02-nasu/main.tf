@@ -1,5 +1,5 @@
 # 問題番号
- variable "problem" {
+ variable "PROBLEM" {
     default = "02"
  }
 
@@ -15,7 +15,7 @@
 
  # script
  resource sakuracloud_note "vnc-init" {
-   name = "vnc-init"
+   name = "${var.PROBLEM}-vnc-init-${var.TEAM_LOGIN_ID}"
    class = "shell"
    content = "${file("start.sh")}"
    description = "VNCサーバ(踏み台)初期化スクリプト"
@@ -28,19 +28,19 @@
 
  # switch
  resource sakuracloud_switch "vnc-switch" {
-    name = "vnc-switch-${var.problem}"
+    name = "${var.PROBLEM}-vnc-switch-${var.TEAM_LOGIN_ID}"
  }
 
  # disks
  resource sakuracloud_disk "vnc-server-disk" {
-    name              = "vnc-server-disk-${var.problem}"
+    name              = "-${var.PROBLEM}-vnc-server-disk-${var.TEAM_LOGIN_ID}"
     source_archive_id = "${data.sakuracloud_archive.vnc-archive.id}"
     note_ids          = ["${sakuracloud_note.vnc-init.id}"]
  }
 
  # servers
  resource sakuracloud_server "vnc-server" {
-    name            = "vnc-server(踏み台)-${var.problem}"
+    name            = "${var.PROBLEM}-vnc-server(踏み台)-${var.TEAM_LOGIN_ID}"
     core            = 2
     memory          = 2
     disks           = ["${sakuracloud_disk.vnc-server-disk.id}"]
@@ -71,7 +71,7 @@ data sakuracloud_archive "02-snmp-archive" {
 
 ## script_for_vyos
 resource "sakuracloud_note" "02-snmp-script" {
-  name        = "02-snmp-script"
+  name        = "${var.PROBLEM}-snmp-script-${var.TEAM_LOGIN_ID}"
   class       = "shell"
   content     = "${file("vyos.sh")}"
 }
@@ -79,24 +79,24 @@ resource "sakuracloud_note" "02-snmp-script" {
 ## disks
 
 resource sakuracloud_disk "02-zabbix-disk" {
-  name              = "02-zabbix-disk"
+  name              = "${var.PROBLEM}-zabbix-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.02-zabbix-archive.id}"  
 }
 
 resource sakuracloud_disk "02-grafana-disk" {
-  name              = "02-grafana-disk"
+  name              = "${var.PROBLEM}-grafana-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.02-grafana-archive.id}"  
 }
 
 resource sakuracloud_disk "02-snmp-disk" {
-  name              = "02-snmp-disk"
+  name              = "${var.PROBLEM}-snmp-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.02-snmp-archive.id}"  
   note_ids          = ["${sakuracloud_note.02-snmp-script.id}"] 
 
 }
 ## servers
 resource sakuracloud_server "02-zabbix-server" {
-  name            = "02-zabbix-server"
+  name            = "${var.PROBLEM}-zabbix-server-${var.TEAM_LOGIN_ID}"
   core            = 1
   memory          = 1
   disks           = ["${sakuracloud_disk.02-zabbix-disk.id}"]
@@ -104,23 +104,17 @@ resource sakuracloud_server "02-zabbix-server" {
 }
 
 resource sakuracloud_server "02-grafana-server" {
-  name            = "02-grafana-server"
+  name            = "${var.PROBLEM}-grafana-${var.TEAM_LOGIN_ID}"
   core            = 1
   memory          = 1
   disks           = ["${sakuracloud_disk.02-grafana-disk.id}"]
   nic             = "${sakuracloud_switch.vnc-switch.id}"
 }
 
-
 resource sakuracloud_server "02-snmp-server" {
-  name            = "02-snmp-server"
+  name            = "${var.PROBLEM}-snmp-server-${var.TEAM_LOGIN_ID}"
   core            = 1
   memory          = 1
   disks           = ["${sakuracloud_disk.02-snmp-disk.id}"]
   nic             = "${sakuracloud_switch.vnc-switch.id}"
 }
-
-
-
-
-

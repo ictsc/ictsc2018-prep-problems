@@ -1,53 +1,76 @@
 # 問題番号
-variable "problem" {
-  default = "03"
-}
+ variable "PROBLEM" {
+  default = "03-uplus"
+ }
 
 # チーム番号
  variable "TEAM_LOGIN_ID" {
-    default = "PUT_TEAM_NUMBER_HERE"
+  default = "PUT_TEAM_NUMBER_HERE"
  }
 
-# vnc admin password
-variable "VNC_SERVER_PASSWORD" {
+variable "WEBHOOK_URL" {
+  default = "https://hooks.slack.com/services/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"
+}
+
+ # vnc admin password
+ variable "VNC_SERVER_PASSWORD" {
     default = "PUT_YOUR_PASSWORD_HERE"
-}
+ }
 
-# script
-resource sakuracloud_note "vnc-init" {
-  name = "vnc-init"
-  class = "shell"
-  content = "${file("start.sh")}"
-  description = "VNCサーバ(踏み台)初期化スクリプト"
-}
+ # script
+ resource sakuracloud_note "vnc-init" {
+   name = "${var.PROBLEM}-vnc-init-${var.TEAM_LOGIN_ID}"
+   class = "shell"
+   content = "${file("start.sh")}"
+   description = "VNCサーバ(踏み台)初期化スクリプト"
+   tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+ }
 
-# vnc archive
-data sakuracloud_archive "vnc-archive" {
-  name_selectors = ["VNC", "IMG" , "V3"]
-}
+ # vnc archive
+ data sakuracloud_archive "vnc-archive" {
+    name_selectors = ["VNC", "IMG" , "V3"]
+ }
 
-# switch
-resource sakuracloud_switch "vnc-switch" {
-  name = "vnc-switch-${var.problem}"
-}
+ # switch
+ resource sakuracloud_switch "vnc-switch" {
+    name = "${var.PROBLEM}-vnc-switch-${var.TEAM_LOGIN_ID}"
+   tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+ }
 
-# disks
-resource sakuracloud_disk "vnc-server-disk" {
-  name              = "vnc-server-disk-${var.problem}"
-  source_archive_id = "${data.sakuracloud_archive.vnc-archive.id}"
-  note_ids          = ["${sakuracloud_note.vnc-init.id}"]
-}
+ # disks
+ resource sakuracloud_disk "vnc-server-disk" {
+    name              = "-${var.PROBLEM}-vnc-server-disk-${var.TEAM_LOGIN_ID}"
+    source_archive_id = "${data.sakuracloud_archive.vnc-archive.id}"
+    note_ids          = ["${sakuracloud_note.vnc-init.id}"]
+    tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+ }
 
-# servers
-resource sakuracloud_server "vnc-server" {
-  name            = "vnc-server(踏み台)-${var.problem}"
-  core            = 2
-  memory          = 2
-  disks           = ["${sakuracloud_disk.vnc-server-disk.id}"]
-  nic             = "shared"
-  additional_nics = ["${sakuracloud_switch.vnc-switch.id}"]
-}
+ # servers
+ resource sakuracloud_server "vnc-server" {
+    name            = "${var.PROBLEM}-vnc-server(踏み台)-${var.TEAM_LOGIN_ID}"
+    core            = 2
+    memory          = 2
+    disks           = ["${sakuracloud_disk.vnc-server-disk.id}"]
+    nic             = "shared"
+    additional_nics = ["${sakuracloud_switch.vnc-switch.id}"]
+    tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+ }
 
+ # output
+ output "vnc_global_ip" {
+    value = "${sakuracloud_server.vnc-server.ipaddress}"
+ }
+
+# simple_monitor
+resource sakuracloud_simple_monitor "vnc-monitor" {
+  target = "${sakuracloud_server.vnc-server.ipaddress}"
+  health_check = {
+    protocol   = "ping"
+    delay_loop = 60
+  }
+  notify_slack_enabled = true
+  notify_slack_webhook = "${var.WEBHOOK_URL}"
+}
 # output
 output "vnc_global_ip" {
   value = "${sakuracloud_server.vnc-server.ipaddress}"
@@ -59,12 +82,14 @@ output "vnc_global_ip" {
 
 # IPv6 Segment 1
 resource sakuracloud_switch "03-ipv6-01" {
-    name = "03-ipv6-01"
+  name = "${var.PROBLEM}-ipv6-01-${var.TEAM_LOGIN_ID}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 # IPv6 Segment 2
 resource sakuracloud_switch "03-ipv6-02" {
-    name = "03-ipv6-02"
+  name = "${var.PROBLEM}-ipv6-02-${var.TEAM_LOGIN_ID}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 
@@ -90,23 +115,27 @@ data sakuracloud_archive "03-client-02-archive" {
 ## Disks
 
 resource sakuracloud_disk "03-router-01-disk" {
-  name              = "03-router-01"
+  name              = "${var.PROBLEM}-router-01-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.03-router-01-archive.id}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 resource sakuracloud_disk "03-router-02-disk" {
-  name              = "03-router-02"
+  name              = "${var.PROBLEM}-router-02-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.03-router-02-archive.id}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 resource sakuracloud_disk "03-client-01-disk" {
-  name              = "03-client-01"
+  name              = "${var.PROBLEM}-client-01-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.03-client-01-archive.id}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 resource sakuracloud_disk "03-client-02-disk" {
-  name              = "03-client-02"
+  name              = "${var.PROBLEM}-client-02-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.03-client-02-archive.id}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 
@@ -114,18 +143,19 @@ resource sakuracloud_disk "03-client-02-disk" {
 
 # router 01
 resource sakuracloud_server "03-router-01-server" {
-  name            = "03-router-01"
+  name            = "${var.PROBLEM}-router-01-${var.TEAM_LOGIN_ID}"
   core            = 1
   memory          = 1
   disks           = ["${sakuracloud_disk.03-router-01-disk.id}"]
   nic             = "${sakuracloud_switch.03-ipv6-01.id}"
   # 192.168.0.1
   additional_nics = ["${sakuracloud_switch.vnc-switch.id}", "${sakuracloud_switch.03-ipv6-02.id}"]
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 # router 02
 resource sakuracloud_server "03-router-02-server" {
-  name            = "03-router-02"
+  name            = "${var.PROBLEM}-router-02-${var.TEAM_LOGIN_ID}"
   core            = 1
   memory          = 1
   disks           = ["${sakuracloud_disk.03-router-02-disk.id}"]
@@ -133,22 +163,24 @@ resource sakuracloud_server "03-router-02-server" {
   # 検証用 v4でVNCからアクセスできる
   # 192.168.0.4
   # additional_nics = ["${sakuracloud_switch.vnc-switch.id}"]
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 # client 01
 resource sakuracloud_server "03-client-01-server" {
-  name            = "03-client-01"
+  name            = "${var.PROBLEM}-client-01-${var.TEAM_LOGIN_ID}"
   core            = 1
   memory          = 1
   disks           = ["${sakuracloud_disk.03-client-01-disk.id}"]
   nic             = "${sakuracloud_switch.03-ipv6-01.id}"
   # 192.168.0.2
   additional_nics = ["${sakuracloud_switch.vnc-switch.id}"]
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 # client 02
 resource sakuracloud_server "03-client-02-server" {
-  name            = "03-client-02"
+  name            = "${var.PROBLEM}-client-02-${var.TEAM_LOGIN_ID}"
   core            = 1
   memory          = 1
   disks           = ["${sakuracloud_disk.03-client-02-disk.id}"]
@@ -156,4 +188,5 @@ resource sakuracloud_server "03-client-02-server" {
   # 検証用 v4でVNCからアクセスできる
   # 192.168.0.3
   # additional_nics = ["${sakuracloud_switch.vnc-switch.id}"]
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }

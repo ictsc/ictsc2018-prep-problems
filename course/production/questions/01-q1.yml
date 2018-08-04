@@ -9,5 +9,5 @@ prompt: |
         作者 @onokatio
         現地点で未完成
 
-answers: |
-        Answer
+answers:
+    - <plain>Answer

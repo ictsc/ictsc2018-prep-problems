@@ -138,7 +138,7 @@ resource sakuracloud_server "04-ikegami-router1-server" {
   memory          = 1
   disks           = ["${sakuracloud_disk.04-ikegami-router1-disk.id}"]
   nic             = "${sakuracloud_switch.vnc-switch.id}"
-  additional_nics = [ "${sakuracloud_switch.04-ikegami-gw-osaka.id}","${sakuracloud_switch.04-ikegami-gw-tokyo.id}"]
+  additional_nics = [ "${sakuracloud_switch.04-ikegami-gw-tokyo.id}","${sakuracloud_switch.04-ikegami-gw-osaka.id}",]
 }
 
 # osaka

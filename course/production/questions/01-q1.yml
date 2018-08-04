@@ -1,0 +1,13 @@
+type: TextQuestion
+id: 01_q1
+value: 10
+widget: textarea
+prompt: |
+
+        ### Docker問題 No.1
+
+        作者 @onokatio
+        現地点で未完成
+
+answers:
+    - <plain>Answer

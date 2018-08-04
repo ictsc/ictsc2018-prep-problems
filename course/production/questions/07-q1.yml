@@ -4,9 +4,9 @@ value: 10
 shuffle: true
 prompt: |
 
-        ### Packet filtering問題 No.1
+    ### Packet filtering問題 No.1
 
-        ### 問題1
+    ### 問題1
 
     あなたはWebサービスを作っている。0.0.0.0:80でnginxが待ち受けしていて、localhost:8080で動いているサービスにproxyするようにしたいのだが、何故か動かない。原因を特定し、正常に動作するために必要な手順を説明せよ。なお、nginxは適切に設定がなされているものとする。
 

@@ -70,8 +70,10 @@ resource sakuracloud_simple_monitor "vnc-monitor" {
     delay_loop = 60
   }
 
+  notify_email_enabled = false
   notify_slack_enabled = true
   notify_slack_webhook = "${var.WEBHOOK_URL}"
+  tags                 = ["problem-${var.PROBLEM}", "${var.TEAM_LOGIN_ID}", "pstate_terraform"]
 }
 
 # output

@@ -76,10 +76,6 @@ resource sakuracloud_simple_monitor "vnc-monitor" {
   tags                 = ["problem-${var.PROBLEM}", "${var.TEAM_LOGIN_ID}", "pstate_terraform"]
 }
 
-# output
-output "vnc_global_ip" {
-  value = "${sakuracloud_server.vnc-server.ipaddress}"
-}
 
 ### 問題環境
 

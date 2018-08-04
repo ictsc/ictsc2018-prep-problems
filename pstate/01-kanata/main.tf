@@ -93,7 +93,7 @@ data sakuracloud_archive "prep1-01-kanata_archive_3" {
 ## disks
 
 resource sakuracloud_disk "prep1-01-kanata_disk_01" {
-  name              = "${var.PROBLEM}-01-${var.PROBLEM}"
+  name              = "${var.PROBLEM}-01-${var.TEAM_LOGIN_ID}"
   hostname          = "kube01"
   password          = "kubernetes"
   source_archive_id = "${data.sakuracloud_archive.prep1-01-kanata_archive_1.id}"

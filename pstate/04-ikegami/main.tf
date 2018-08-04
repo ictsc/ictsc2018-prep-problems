@@ -48,7 +48,7 @@ resource sakuracloud_switch "vnc-switch" {
 
 # disks
 resource sakuracloud_disk "vnc-server-disk" {
-  name              = "-${var.PROBLEM}-vnc-server-disk-${var.TEAM_LOGIN_ID}"
+  name              = "${var.PROBLEM}-vnc-server-disk-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.vnc-archive.id}"
   note_ids          = ["${sakuracloud_note.vnc-init.id}"]
   tags              = ["problem-${var.PROBLEM}", "${var.TEAM_LOGIN_ID}", "pstate_terraform"]

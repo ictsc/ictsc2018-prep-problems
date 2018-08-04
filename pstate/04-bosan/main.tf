@@ -1,6 +1,6 @@
 # 問題番号
 variable "PROBLEM" {
-  default = "02-nasu"
+  default = "04-bosan"
 }
 
 # チーム番号
@@ -39,7 +39,7 @@ resource sakuracloud_switch "vnc-switch" {
 
 # disks
 resource sakuracloud_disk "vnc-server-disk" {
-  name              = "-${var.PROBLEM}-vnc-server-disk-${var.TEAM_LOGIN_ID}"
+  name              = "${var.PROBLEM}-vnc-server-disk-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.vnc-archive.id}"
   note_ids          = ["${sakuracloud_note.vnc-init.id}"]
   tags              = ["problem-${var.PROBLEM}", "${var.TEAM_LOGIN_ID}", "pstate_terraform"]
@@ -118,7 +118,7 @@ resource sakuracloud_disk "04-bo_san-vyos_Router2-disk" {
 }
 
 resource sakuracloud_server "bo_san-vyos_Router2" {
-  name   = "${var.PROBLEM-}vyos_Router2-${var.TEAM_LOGIN_ID}"
+  name   = "${var.PROBLEM}vyos_Router2-${var.TEAM_LOGIN_ID}"
   core   = 1
   memory = 1
   disks  = ["${sakuracloud_disk.04-bo_san-vyos_Router2-disk.id}"]

@@ -1,17 +1,18 @@
-type: TypeQuestion
+type: TextQuestion
 id: 07_q2
 value: 10
 shuffle: true
+widget: textarea
 prompt: |
 
     ### Packet filtering問題 No.2
-
-    keyword:netfilter queue
-
+    
+    作者@takemioIO
+    
     ここにGoで書かれたコードがあります．これはv4のipをキーにして弾くことができます
     このコードを参考に後述する問いに答えてください．
 
-    ``` go
+     ``` go
     package main
 
     import (
@@ -40,7 +41,14 @@ prompt: |
             fmt.Println("Drop is Port")
         }
     }
+    func isSelecteExcludedInMACAddr(packet *netfilter.NFPacket, target string) {
+	      if target == EXCLUDE_IN_MACAddr {
+		      packet.SetVerdict(netfilter.NF_DROP)
+		      fmt.Println("Drop is MACAddress")
+	      }
+    }
 
+    
     func main() {
         var err error
 
@@ -61,6 +69,7 @@ prompt: |
                     ip, _ := ipLayer.(*layers.IPv4)
                     isSelectedExcludeInIP(&packet, ip.SrcIP.String())
                 } else if <2>{
+                    tcp, _ := tcpLayer.(*layers.TCP)
                     <3>
                 }else {
                     packet.SetVerdict(netfilter.NF_ACCEPT)
@@ -69,30 +78,9 @@ prompt: |
         }
     }
     ```
-    1. これ使ってパケットを弾く必要があります．立ち上げる際には`go run ファイル名`で起動することができるのですが，iptablesでqueueの設定をしなくはいけません．前述したコードを用いてipを弾く際にはどのようにqueueの設定をすれば良いのでしょう？また，startだけではなくてstopの時も示してください．
-    A.
-    ```
-    //start: sudo iptables -A OUTPUT -j NFQUEUE --queue-num 10
-    //end  : sudo iptables -D OUTPUT -j NFQUEUE --queue-num 10
-    ```
-    2. 突然ですがあなたは学内ネットワークの管理者になりました．そこでは`sshなんて通しちゃダメ`という謎の言葉があるドキュメントがあり，あなたはそれに従う必要が出てきました．前述したコードには<1>,<2>,<3>という穴があり，そこを選択肢から一つ選んで埋めよ
-    以下に答え
-    - <1>
-    `22`
-    - <2>
-    `tcpLayer != nil`
-    - <3>
-    ```
-    tcp, _ := tcpLayer.(*layers.TCP)
-    isSelectedExcludeInPort(&packet, tcp.SrcPort.String())
-    ```
 
-choices:
+    問題1. これ使ってパケットを弾く必要があります．立ち上げる際には`go run ファイル名`で起動することができるのですが，iptablesでqueueの設定をしなくはいけません．
+    前述したコードを用いてipを弾く際にはどのようにコマンドでqueueの設定をすれば良いのでしょうか？コマンドは`iptables~`から始めて記述してください．また，startだけではなくてstopの時も別で示してください．(記述式)
 
-  - ~CORRECT~ Answer-01
-  - Answer-02
-  - Answer-03
-  - Answer-04
-
-answer_explanation:
-  Answer-01<br/>
+answers:
+    - <plain> Answer

@@ -1,21 +1,53 @@
-type: ChoiceQuestion
+type: TextQuestion
 id: 07_q5
 value: 10
 shuffle: true
+widget: textarea
 prompt: |
 
-        ### Packet filtering問題 No.5
+    ### Packet filtering問題 No.3(続き)
 
-        作者 @
-        現地点で未完成
+    問題2. フィルタリングの技術としてeBPF(extend Berkeley　Packet Filter)と言うものがある．
+    BPFはレジスタマシーンとして命令を受理して動作が行われるがこれを踏まえるとtcpdumpはフィルター条件式のパーサーとそれコンパイルすることをしているある種のドメイン言語とも言えて，最近ではJITコンパイルを行うものも存在する．
+    さて，コンパイラと同じと言うことはあるバイトコードを吐くと言う事がわかる．
+
+    例えば
+    `tcpdump -p -ni en0 -d "ip and udp"`
+    を実行すると以下のようなバイトコードが出力される．
+    軽く説明すると0x0800がイーサネットフレーム上のipv4を示していて，0x11がUDPと言うことを示している．
+    これらが無事マッチしたら最後の005に飛んで無事フィルターにマッチしたものが出力されると言うわけである．
+
+    ```asm
+    (000) ldh      [12]
+    (001) jeq      #0x800           jt 2	jf 5
+    (002) ldb      [23]
+    (003) jeq      #0x11            jt 4	jf 5
+    (004) ret      #262144
+    (005) ret      #0
+    ```
+
+    では以下のバイトコードの示している条件式を答えよ
+
+    ```asm
+    (000) ldh      [12]
+    (001) jeq      #0x86dd          jt 16 jf 2
+    (002) jeq      #0x800           jt 3  jf 16
+    (003) ldb      [23]
+    (004) jeq      #0x6             jt 5  jf 16
+    (005) ldh      [20]
+    (006) jset     #0x1fff          jt 16 jf 7
+    (007) ldxb     4*([14]&0xf)
+    (008) ldh      [x + 14]
+    (009) jeq      #0x50            jt 12 jf 10
+    (010) ldh      [x + 16]
+    (011) jeq      #0x50            jt 12 jf 16
+    (012) ld       [30]
+    (013) jeq      #0xc0a802c8      jt 15 jf 14
+    (014) jeq      #0xc0a80164      jt 15 jf 16
+    (015) ret      #262144
+    (016) ret      #0
+    ```
 
 
-choices:
-
-  - ~CORRECT~ Answer-01
-  - Answer-02
-  - Answer-03
-  - Answer-04
-
-answer_explanation:
-  Answer-01<br/>
+answers:
+    - <plain> Answer

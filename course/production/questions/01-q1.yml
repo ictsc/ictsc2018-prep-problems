@@ -1,5 +1,5 @@
 type: TextQuestion
-id: 01-q1
+id: 01_q1
 value: 10
 widget: textarea
 shuffle: true

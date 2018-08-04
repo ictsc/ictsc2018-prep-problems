@@ -1,0 +1,24 @@
+type: TextQuestion
+id: 05-q2
+value: 10
+shuffle: true
+widget: textarea
+prompt: |
+
+        ### Xen問題 No.2
+        #### Xenの知識問題-2
+
+        作者 @acque.2two
+        
+        なんでかVMが起動できないとき、見ないといけないログファイルはどれ？（記述式）
+
+
+choices:
+
+  - ~CORRECT~ Answer-01
+  - Answer-02
+  - Answer-03
+  - Answer-04
+
+answer_explanation:
+  Answer-01<br/>

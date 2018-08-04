@@ -1,0 +1,57 @@
+type: ChoiceQuestion
+id: 07-q3
+value: 10
+shuffle: true
+prompt: |
+
+    ### Packet filtering問題 No.3
+
+    keyword: フィルタリングの条件式構文, eBPF
+
+    ネットワークのパケットをtcpdumpでキャプチャするときの基礎として「フィルタリングの条件式構文」が挙げられる．式は、一つかそれ以上の要素で構成され，要素は通常は、一つかそれ以上の修飾子によって存在する．
+
+    具体例を挙げると
+    - `192.168.0.1`の場合だけを見たい場合は`tcpdump net 192.168.0.1`
+    - ポート21~23だけを見たい場合は`tcpdump portrange 21-23`
+
+    といった風に任意の条件式を使うことができる．
+
+    さて，突然ですがいくつかの問題です．
+    1. tcpdumpでinteface　eth1から取得して、http getとpostのみを表示すると言う条件でフィルタリングして表示せよ
+
+    2. tcpdumpでinteface　eth0から取得して、宛先アドレスは192.168.2.200または192.168.1.100,tcpでポートは80と言う条件ででフィルタリングして表示せよ
+
+    3. フィルタリングの技術としてeBPF(extend Berkeley　Packet Filter)と言うものがある．BPFはレジスタマシーンとして命令を受理して動作が行われる．これを踏まえるとtcpdumpはフィルター条件式のパーサーとそれコンパイルすることをしているある種のドメイン言語とも言える．JITコンパイルを行うものも存在する．
+
+    さて，以下のバイトコードはある条件を示している．以下の選択肢からこのバイトコードと同じ挙動の条件を選べ
+
+    ```asm
+    (000) ldh      [12]
+    (001) jeq      #0x86dd          jt 16 jf 2
+    (002) jeq      #0x800           jt 3  jf 16
+    (003) ldb      [23]
+    (004) jeq      #0x6             jt 5  jf 16
+    (005) ldh      [20]
+    (006) jset     #0x1fff          jt 16 jf 7
+    (007) ldxb     4*([14]&0xf)
+    (008) ldh      [x + 14]
+    (009) jeq      #0x50            jt 12 jf 10
+    (010) ldh      [x + 16]
+    (011) jeq      #0x50            jt 12 jf 16
+    (012) ld       [30]
+    (013) jeq      #0xc0a802c8      jt 15 jf 14
+    (014) jeq      #0xc0a80164      jt 15 jf 16
+    (015) ret      #262144
+    (016) ret      #0
+    ```
+
+
+choices:
+
+  - ~CORRECT~ Answer-01
+  - Answer-02
+  - Answer-03
+  - Answer-04
+
+answer_explanation:
+  Answer-01<br/>

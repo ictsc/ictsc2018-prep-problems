@@ -1,0 +1,98 @@
+type: TypeQuestion
+id: 07-q2
+value: 10
+shuffle: true
+prompt: |
+
+        ### Packet filtering問題 No.2
+
+    keyword:netfilter queue
+
+    ここにGoで書かれたコードがあります．これはv4のipをキーにして弾くことができます
+    このコードを参考に後述する問いに答えてください．
+
+    ``` go
+    package main
+
+    import (
+        "fmt"
+        "os"
+
+        "github.com/AkihiroSuda/go-netfilter-queue"
+        "github.com/google/gopacket/layers"
+    )
+
+    const NFQUEUE_NUM_ID = 10
+    const MAX_PACKET_IN_QUEUE = 300
+
+    const EXCLUDE_IN_IP = "192.168.0.2"
+    const EXCLUDE_IN_Port = <1>
+
+    func isSelectedExcludeInIP(packet *netfilter.NFPacket, target string) {
+        if target == EXCLUDE_IN_IP {
+            packet.SetVerdict(netfilter.NF_DROP)
+            fmt.Println("Drop is IP")
+        }
+    }
+    func isSelectedExcludeInPort(packet *netfilter.NFPacket, target string) {
+        if target == EXCLUDE_IN_Port {
+            packet.SetVerdict(netfilter.NF_DROP)
+            fmt.Println("Drop is Port")
+        }
+    }
+
+    func main() {
+        var err error
+
+        nfq, err := netfilter.NewNFQueue(NFQUEUE_NUM_ID, MAX_PACKET_IN_QUEUE, netfilter.NF_DEFAULT_PACKET_SIZE)
+        if err != nil {
+            fmt.Println(err)
+            os.Exit(1)
+        }
+        defer nfq.Close()
+        packets := nfq.GetPackets()
+        for true {
+            select {
+            case packet := <-packets:
+                ethernetLayer := packet.Packet.Layer(layers.LayerTypeEthernet)
+                ipLayer := packet.Packet.Layer(layers.LayerTypeIPv4)
+                tcpLayer := packet.Packet.Layer(layers.LayerTypeTCP)
+                if ipLayer != nil {
+                    ip, _ := ipLayer.(*layers.IPv4)
+                    isSelectedExcludeInIP(&packet, ip.SrcIP.String())
+                } else if <2>{
+                    <3>
+                }else {
+                    packet.SetVerdict(netfilter.NF_ACCEPT)
+                }
+            }
+        }
+    }
+    ```
+    1. これ使ってパケットを弾く必要があります．立ち上げる際には`go run ファイル名`で起動することができるのですが，iptablesでqueueの設定をしなくはいけません．前述したコードを用いてipを弾く際にはどのようにqueueの設定をすれば良いのでしょう？また，startだけではなくてstopの時も示してください．
+    A.
+    ```
+    //start: sudo iptables -A OUTPUT -j NFQUEUE --queue-num 10
+    //end  : sudo iptables -D OUTPUT -j NFQUEUE --queue-num 10
+    ```
+    2. 突然ですがあなたは学内ネットワークの管理者になりました．そこでは`sshなんて通しちゃダメ`という謎の言葉があるドキュメントがあり，あなたはそれに従う必要が出てきました．前述したコードには<1>,<2>,<3>という穴があり，そこを選択肢から一つ選んで埋めよ
+    以下に答え
+    - <1>
+    `22`
+    - <2>
+    `tcpLayer != nil`
+    - <3>
+    ```
+    tcp, _ := tcpLayer.(*layers.TCP)
+    isSelectedExcludeInPort(&packet, tcp.SrcPort.String())
+    ```
+
+choices:
+
+  - ~CORRECT~ Answer-01
+  - Answer-02
+  - Answer-03
+  - Answer-04
+
+answer_explanation:
+  Answer-01<br/>

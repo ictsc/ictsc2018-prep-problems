@@ -1,0 +1,21 @@
+type: ChoiceQuestion
+id: 06-q3
+value: 10
+shuffle: true
+prompt: |
+
+        ### Load Balancwer問題 No.3
+
+        作者 @rikugemb
+        現地点で未完成
+
+
+choices:
+
+  - ~CORRECT~ Answer-01
+  - Answer-02
+  - Answer-03
+  - Answer-04
+
+answer_explanation:
+  Answer-01<br/>

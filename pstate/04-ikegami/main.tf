@@ -218,4 +218,5 @@ resource sakuracloud_server "04-ikegami-fumidai-server" {
   disks           = ["${sakuracloud_disk.04-ikegami-fumidai-disk.id}"]
   nic             = "${sakuracloud_switch.04-ikegami-osaka-fumidai.id}"
   additional_nics = ["${sakuracloud_switch.vnc-switch.id}"]
+  tags   = ["problem-${var.PROBLEM}", "${var.TEAM_LOGIN_ID}", "pstate_terraform"]
 }

@@ -176,6 +176,6 @@ resource sakuracloud_server "04-ikegami-fumidai-server" {
   core            = 1
   memory          = 1
   disks           = ["${sakuracloud_disk.04-ikegami-fumidai-disk.id}"]
-  nic             = "${sakuracloud_switch.04-ikegami-gw-osaka.id}"
+  nic             = "${sakuracloud_switch.04-ikegami-osaka-fumidai.id}"
   additional_nics = ["${sakuracloud_switch.vnc-switch.id}"]
 }

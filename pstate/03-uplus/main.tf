@@ -5,7 +5,7 @@ variable "problem" {
 
 # vnc admin password
 variable "VNC_SERVER_PASSWORD" {
-  # default = ""
+    default = "PUT_YOUR_PASSWORD_HERE"
 }
 
 # script

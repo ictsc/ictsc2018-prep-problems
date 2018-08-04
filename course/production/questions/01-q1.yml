@@ -2,7 +2,6 @@ type: TextQuestion
 id: 01_q1
 value: 10
 widget: textarea
-shuffle: true
 prompt: |
 
         ### Docker問題 No.1
@@ -10,11 +9,4 @@ prompt: |
         作者 @onokatio
         現地点で未完成
 
-
-choices:
-
-  - ~CORRECT~ Answer-01
-  - Answer-02
-  - Answer-03
-  - Answer-04
 

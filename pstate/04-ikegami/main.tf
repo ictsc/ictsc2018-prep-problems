@@ -180,7 +180,7 @@ resource sakuracloud_server "04-ikegami-router1-server" {
 
 # osaka
 resource sakuracloud_server "04-ikegami-osaka-server" {
-  name            = "${var.TEAM_LOGIN_ID}-osaka-${var.TEAM_LOGIN_ID}"
+  name            = "${var.PROBLEM}-osaka-${var.TEAM_LOGIN_ID}"
   core            = 1
   memory          = 4
   disks           = ["${sakuracloud_disk.04-ikegami-osaka-disk.id}"]

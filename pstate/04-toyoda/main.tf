@@ -93,6 +93,6 @@
      core            = 1
      memory          = 1
      disks           = ["${sakuracloud_disk.04-toyoda-Router-B-disk.id}"]
-     nic             = "${sakuracloud_switch.vnc-switch.id}"
-     additional_nics = ["${sakuracloud_switch.04-toyoda-switch.id}"]
+     nic             = "${sakuracloud_switch.04-toyoda-switch.id}"
+     additional_nics = ["${sakuracloud_switch.vnc-switch.id}"]
   }

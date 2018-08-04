@@ -21,7 +21,7 @@
  resource sakuracloud_note "vnc-ikegami" {
    name = "vnc-ikegami"
    class = "shell"
-   content = "${file("start-vnc-ikegami.sh")}"
+   content = "${file("vnc-ikegami.sh")}"
  }
 
  # vnc archive
@@ -138,7 +138,7 @@ resource sakuracloud_server "04-ikegami-router1-server" {
   memory          = 1
   disks           = ["${sakuracloud_disk.04-ikegami-router1-disk.id}"]
   nic             = "${sakuracloud_switch.vnc-switch.id}"
-  additional_nics = ["${sakuracloud_switch.04-ikegami-gw-osaka.id}", "${sakuracloud_switch.04-ikegami-gw-tokyo.id}"]
+  additional_nics = [ "${sakuracloud_switch.04-ikegami-gw-tokyo.id}","${sakuracloud_switch.04-ikegami-gw-osaka.id}",]
 }
 
 # osaka
@@ -147,8 +147,8 @@ resource sakuracloud_server "04-ikegami-osaka-server" {
   core            = 1
   memory          = 4
   disks           = ["${sakuracloud_disk.04-ikegami-osaka-disk.id}"]
-  nic             = "${sakuracloud_switch.04-ikegami-gw-osaka.id}"
-  additional_nics = ["${sakuracloud_switch.04-ikegami-osaka-fumidai.id}"]
+  nic             = "${sakuracloud_switch.04-ikegami-osaka-fumidai.id}"
+  additional_nics = ["${sakuracloud_switch.04-ikegami-gw-osaka.id}"]
 }
 
 # tokyo

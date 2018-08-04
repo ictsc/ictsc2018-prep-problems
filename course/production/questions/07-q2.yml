@@ -1,4 +1,4 @@
-type: TypeQuestion
+type: TextQuestion
 id: 07_q2
 value: 10
 shuffle: true

@@ -130,4 +130,5 @@ resource sakuracloud_server "06-http-server-B-server" {
   memory = 1
   disks  = ["${sakuracloud_disk.06-http-server-B-disk.id}"]
   nic    = "${sakuracloud_switch.vnc-switch.id}"
+  tags   = ["problem-${var.PROBLEM}", "${var.TEAM_LOGIN_ID}", "pstate_terraform"]
 }

@@ -1,7 +1,6 @@
 type: TextQuestion
 id: 07_q2
 value: 10
-shuffle: true
 prompt: |
 
     ### Packet filtering問題 No.2

@@ -1,6 +1,6 @@
 # 問題番号
  variable "PROBLEM" {
-    default = "02"
+    default = "02-nasu"
  }
 
 # チーム番号
@@ -23,6 +23,7 @@ variable "WEBHOOK_URL" {
    class = "shell"
    content = "${file("start.sh")}"
    description = "VNCサーバ(踏み台)初期化スクリプト"
+   tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
  }
 
  # vnc archive
@@ -33,6 +34,7 @@ variable "WEBHOOK_URL" {
  # switch
  resource sakuracloud_switch "vnc-switch" {
     name = "${var.PROBLEM}-vnc-switch-${var.TEAM_LOGIN_ID}"
+   tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
  }
 
  # disks
@@ -40,6 +42,7 @@ variable "WEBHOOK_URL" {
     name              = "-${var.PROBLEM}-vnc-server-disk-${var.TEAM_LOGIN_ID}"
     source_archive_id = "${data.sakuracloud_archive.vnc-archive.id}"
     note_ids          = ["${sakuracloud_note.vnc-init.id}"]
+    tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
  }
 
  # servers
@@ -50,6 +53,7 @@ variable "WEBHOOK_URL" {
     disks           = ["${sakuracloud_disk.vnc-server-disk.id}"]
     nic             = "shared"
     additional_nics = ["${sakuracloud_switch.vnc-switch.id}"]
+    tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
  }
 
  # output
@@ -89,6 +93,8 @@ resource "sakuracloud_note" "02-snmp-script" {
   name        = "${var.PROBLEM}-snmp-script-${var.TEAM_LOGIN_ID}"
   class       = "shell"
   content     = "${file("vyos.sh")}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+
 }
 
 ## disks
@@ -96,18 +102,21 @@ resource "sakuracloud_note" "02-snmp-script" {
 resource sakuracloud_disk "02-zabbix-disk" {
   name              = "${var.PROBLEM}-zabbix-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.02-zabbix-archive.id}"  
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+
 }
 
 resource sakuracloud_disk "02-grafana-disk" {
   name              = "${var.PROBLEM}-grafana-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.02-grafana-archive.id}"  
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 
 resource sakuracloud_disk "02-snmp-disk" {
   name              = "${var.PROBLEM}-snmp-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.02-snmp-archive.id}"  
   note_ids          = ["${sakuracloud_note.02-snmp-script.id}"] 
-
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
 }
 ## servers
 resource sakuracloud_server "02-zabbix-server" {
@@ -116,6 +125,8 @@ resource sakuracloud_server "02-zabbix-server" {
   memory          = 1
   disks           = ["${sakuracloud_disk.02-zabbix-disk.id}"]
   nic             = "${sakuracloud_switch.vnc-switch.id}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+
 }
 
 resource sakuracloud_server "02-grafana-server" {
@@ -124,6 +135,8 @@ resource sakuracloud_server "02-grafana-server" {
   memory          = 1
   disks           = ["${sakuracloud_disk.02-grafana-disk.id}"]
   nic             = "${sakuracloud_switch.vnc-switch.id}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+
 }
 
 resource sakuracloud_server "02-snmp-server" {
@@ -132,4 +145,6 @@ resource sakuracloud_server "02-snmp-server" {
   memory          = 1
   disks           = ["${sakuracloud_disk.02-snmp-disk.id}"]
   nic             = "${sakuracloud_switch.vnc-switch.id}"
+  tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+
 }

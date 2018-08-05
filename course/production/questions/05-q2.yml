@@ -1,7 +1,6 @@
 type: TextQuestion
 id: 05_q2
 value: 10
-shuffle: true
 widget: textarea
 prompt: |
 

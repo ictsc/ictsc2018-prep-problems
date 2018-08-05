@@ -60,10 +60,10 @@ prompt: |
         }
     }
     func isSelecteExcludedInMACAddr(packet *netfilter.NFPacket, target string) {
-	      if target == EXCLUDE_IN_MACAddr {
-		      packet.SetVerdict(netfilter.NF_DROP)
-		      fmt.Println("Drop is MACAddress")
-	      }
+          if target == EXCLUDE_IN_MACAddr {
+              packet.SetVerdict(netfilter.NF_DROP)
+              fmt.Println("Drop is MACAddress")
+          }
     }
 
     

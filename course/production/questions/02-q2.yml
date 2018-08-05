@@ -1,0 +1,20 @@
+type: ChoiceQuestion
+id: nasuSNMP1
+value: 10
+shuffle: true
+prompt: |
+    
+    ### ホスト名のOIDは？
+    対象機器のホスト名(sysName)がわかるOIDが下記のうちからどれか<br/>
+    <br/>
+    <br/>
+choices:
+
+  - ~CORRECT~ .1.3.6.1.2.1.1.5
+  - .1.3.6.1.2.1.1.4
+  - .1.3.6.1.2.1.2.1
+  - .1.3.6.1.2.1.2.5
+  - .1.3.6.1.2.2.2.5
+  - .1.3.6.1.2.1.1.3
+
+answer_explanation:

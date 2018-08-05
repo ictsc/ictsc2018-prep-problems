@@ -1,0 +1,21 @@
+type: ChoiceQuestion
+id: nasuSNMP1
+value: 10
+shuffle: true
+prompt: |
+    
+    ### SNMPのポート番号
+    SNMPが使うポート番号はどれか。<br/>
+    <br/>
+    <br/>
+choices:
+
+  - 160/TCP
+  - 160/UDP
+  - 161/TCP
+  - ~CORRECT~ 161/UDP
+ 
+answer_explanation:
+
+   161/UDP<br/>
+  

@@ -1,21 +1,26 @@
 type: ChoiceQuestion
 id: 03_q3
 value: 10
-shuffle: true
+shuffle: false
 prompt: |
 
-        ### IPv6問題 No.3
+    ### IPv6問題 No.3 IPv6豆知識
 
-        作者 @uplus
-        現地点で未完成
-
+    以下のIPv6に関する文章の中からもっとも正しいものを選べ
 
 choices:
 
-  - ~CORRECT~ Answer-01
-  - Answer-02
-  - Answer-03
-  - Answer-04
+    - IPv6ではアドレス解決にARPv6を使う
+    - RA(Router Advertisement)パケットではDNSアドレスを通知することができない
+    - ICMPv6はDos攻撃に利用されるため常にフィルタしたほうが良い
+    - ~CORRECT~ ユニークローカルアドレスはルータを超えられる
+    - IPv6にはIPv4射影アドレスがあるので、宛先ノードがIPv6非対応でもIPv6で通信することができる
 
-answer_explanation:
-  Answer-01<br/>
+answer_explanation: |
+    IPv6ではアドレス解決にICMPv6を使います。<br/>
+    策定当初はRAでDNSのアドレスを配布することはできませんでしたが、現在は可能です(実装されているとは限らない)。<br/>
+    ICMPv6をフィルタするとアドレス解決ができない等の問題があります。<br/>
+    リンクローカルアドレスはルータ超えできませんが、ユニークローカルアドレスはルータ超えできます。<br/>
+    射影アドレスでは宛先ノードが非対応だとIPv6で通信できません。<br/>
+    <br/>
+    __解説書き途中 間違えあるかも__ <br/>

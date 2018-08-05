@@ -127,7 +127,7 @@ resource sakuracloud_server "06-http-server-A-server" {
 }
 
 resource sakuracloud_server "06-http-server-B-server" {
-  name   = "${var.TEAM_LOGIN_ID}-http-server-B-${var.TEAM_LOGIN_ID}"
+  name   = "${var.PROBLEM}-http-server-B-${var.TEAM_LOGIN_ID}"
   core   = 1
   memory = 1
   disks  = ["${sakuracloud_disk.06-http-server-B-disk.id}"]

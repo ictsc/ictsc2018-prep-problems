@@ -5,8 +5,8 @@ chunks:
     id: ictsc2018-pre1-snmp
     rules:
     -
-        if_after: end_week 3
-        if_before: 2018-08-17 00:00:00 -5
+        if_after: 2018-08-05 15:30:00 +9
+        if_before: 2018-08-05 14:30:00 +9
         weight: 100
 
     -
@@ -99,5 +99,13 @@ chunks:
         2. [こちら](flow:ictsc7-pre) よりアクセス
         3. 左下の [開始] をクリックし、競技スタート！
         (解答途中の状態がある場合は [再開] をクリックしてください)
+        
+        ### 問題一蘭
+        * Docker(flow:ictsc2018-pre1-01)
+        * SNMP(flow:ictsc2018-pre1-02)
+        * IPv6(flow:ictsc2018-pre1-03)
+        * Xen(flow:ictsc2018-pre1-05)
+        * Load Balancer(flow:ictsc2018-pre1-06)
+        * Packet Filter(flow:ictsc2018-pre1-07)
         
         <br />

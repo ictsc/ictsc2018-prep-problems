@@ -4,18 +4,23 @@ value: 10
 shuffle: true
 prompt: |
 
-        ### IPv6問題 No.2
+    ### IPv6問題 No.2 EUI-64
 
-        作者 @uplus
-        現地点で未完成
-
+    以下のMACアドレスからユニキャストアドレスのインターフェースIDを自動生成した場合に適切なものを選択肢から選べ。<br/>
+    <br/>
+    94:de:80:6c:8e:4d<br/>
 
 choices:
+    - ~CORRECT~ 96de:80ff:fe6c:8e4d
+    - ffff:94de:806c:8e4d
+    - 94de:80ff:fe6c:8e4d
+    - 94de:80ff:ff6c:8e4d
+    - fe80::94de:80ff:ff6c:8e4d
 
-  - ~CORRECT~ Answer-01
-  - Answer-02
-  - Answer-03
-  - Answer-04
-
-answer_explanation:
-  Answer-01<br/>
+answer_explanation: |
+    正解は 96de:80ff:fe6c:8e4d です。<br/>
+    <br/>
+    変換の手順は以下です。<br/>
+    1. MACアドレスを24ビットずつに分割<br/>
+    2. 分割した間に0xfffeを挿入<br/>
+    3. 7ビット目を反転<br/>

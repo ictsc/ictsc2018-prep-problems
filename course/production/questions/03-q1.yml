@@ -1,0 +1,21 @@
+type: ChoiceQuestion
+id: 03_q1
+value: 10
+shuffle: true
+prompt: |
+
+        ### IPv6問題 No.1
+
+        作者 @uplus
+        現地点で未完成
+
+
+choices:
+
+  - ~CORRECT~ Answer-01
+  - Answer-02
+  - Answer-03
+  - Answer-04
+
+answer_explanation:
+  Answer-01<br/>

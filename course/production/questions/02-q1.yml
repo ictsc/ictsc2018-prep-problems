@@ -5,11 +5,9 @@ shuffle: true
 prompt: |
     
     ### SNMPのポート番号
-
     SNMPが使うポート番号はどれか。<br/>
     <br/>
     <br/>
-
 choices:
 
   - 160/TCP
@@ -20,3 +18,4 @@ choices:
 answer_explanation:
 
    161/UDP<br/>
+  

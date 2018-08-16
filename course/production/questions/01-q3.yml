@@ -1,0 +1,79 @@
+type: ChoiceQuestion
+id: 01_q3
+value: 10
+shuffle: false
+prompt: |
+
+        ### Docker問題 No.3
+
+        以下に示す環境でイメージをビルドしたとき、期待される `docker run an_image ls -l / | grep hoge` コマンドの結果は選択肢のうちどれか。<br>
+        なお、 `alpine:3.4` イメージにおいて、 gid=20 は `dialout` group とする。
+
+        ```
+        # ls -l
+        total 16
+        -rw-r--r--  1 502  20   296  8 16 19:17 Dockerfile
+        -rw-r--r--  1 502  20  3072  8 16 19:09 hoge.tar.gz
+        # tar tvf hoge.tar.gz
+        drwxr-xr-x  0 502 20     0  8 16 19:09 hoge/
+        -rw-r--r--  0 502 20     0  8 16 18:41 hoge/a
+        -rw-r--r--  0 502 20     0  8 16 18:41 hoge/b
+        # curl https://some_host/hoge.tar.gz > remote_hoge.tar.gz
+        # tar tvf remote_hoge.tar.gz
+        drwxr-xr-x  0 1001 0     0  8 16 19:16 hoge/
+        -rw-r--r--  0 1001 0     0  8 16 19:16 hoge/a
+        -rw-r--r--  0 1001 0     0  8 16 19:16 hoge/b
+        # cat Dockerfile
+        FROM alpine:3.6
+
+        ADD hoge.tar.gz https://some_host/labo/tar/hoge.tar.gz /
+        # docker build -t an_image .
+        ```
+
+        1.
+        ```
+        drwxr-xr-x    1 root     root          4096 Aug 16 10:09 hoge
+        ```
+
+        2.
+        ```
+        drwxr-xr-x    1 502      dialout       4096 Aug 16 10:09 hoge
+        ```
+
+        3.
+        ```
+        -rw-------    1 root     root          3072 Aug 16 10:09 hoge.tar.gz
+        ```
+
+        4.
+        ```
+        -rw-------    1 502      dialout       3072 Aug 16 10:09 hoge.tar.gz
+        ```
+
+        5.
+        ```
+        drwxr-xr-x    1 502      dialout       4096 Aug 16 10:09 hoge
+        -rw-------    1 root     root          3072 Aug 16 10:09 hoge.tar.gz
+        ```
+
+        6.
+        ```
+        drwxr-xr-x    1 root     root          4096 Aug 16 10:09 hoge
+        -rw-------    1 502      dialout       3072 Aug 16 10:09 hoge.tar.gz
+        ```
+
+choices:
+
+    - 1
+    - 2
+    - 3
+    - 4
+    - ~CORRECT~ 5
+    - 6
+
+answer_explanation: |
+    正解は5です。<br>
+    <br>
+    ローカルの tar.gz ファイルは展開され、所有者も維持されます。<br>
+    リモートの tar.gz ファイルは展開されずコピーされます。 (所有者は docker build 時の current user で上書きされます。)<br>
+    <br>

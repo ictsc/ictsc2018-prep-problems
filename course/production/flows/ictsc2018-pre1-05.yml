@@ -42,18 +42,10 @@ groups:
     id: intro
     pages:
 
-    -
-        type: Page
-        id: updateinfo
-        content: |
-            ### 問題更新情報 
-            <br />
-            変更内容等の更新情報が追記されます。<br/>
-            <br/>
 
 -
     id: quiz_start
-    shuffle: true
+    shuffle: false
     pages:
 
     # Pages can be given in-line (like this one) or brought in by including

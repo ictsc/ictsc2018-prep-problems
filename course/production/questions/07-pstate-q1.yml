@@ -1,0 +1,12 @@
+type: HumanGradedTextQuestion
+id: 07_qstate_q1
+value: 10
+widget: textarea
+prompt: |
+
+        ### Packet Filtering問題 実技
+
+        実技問題の「Packet Filtering」の解答を書いてください
+
+answers:
+    - <plain> Answer

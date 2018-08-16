@@ -1,0 +1,13 @@
+type: HumanGradedTextQuestion
+id: 04_qstate_q3
+value: 10
+widget: textarea
+prompt: |
+
+        ### Network問題 実技3
+
+        実技問題の「NAT」の解答を書いてください
+
+answers:
+    - <plain> Answer
+

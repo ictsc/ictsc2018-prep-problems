@@ -1,0 +1,13 @@
+type: HumanGradedTextQuestion
+id: 04_qstate_q2
+value: 10
+widget: textarea
+prompt: |
+
+        ### Network問題 実技2
+
+        実技問題の「BGP」の解答を書いてください
+
+answers:
+    - <plain> Answer
+

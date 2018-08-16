@@ -31,16 +31,7 @@ rules:
         permissions: [view, submit_answer]
 
     grade_identifier: ictsc2018_prep01_prob07_relate
-    grade_aggregation_strategy: use_latest
-
-    grading:
-    -
-        credit_percent: 100
-
 groups:
--
-    id: intro
-    pages:
 
 -
     id: quiz_start

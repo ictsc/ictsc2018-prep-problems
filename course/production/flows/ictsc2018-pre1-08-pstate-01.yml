@@ -37,18 +37,6 @@ rules:
         credit_percent: 100
 
 groups:
--
-    id: intro
-    pages:
-
-    -
-        type: Page
-        id: updateinfo
-        content: |
-            ### 問題更新情報
-            <br />
-            変更内容等の更新情報が追記されます。<br/>
-            <br/>
 
 -
     id: quiz_start

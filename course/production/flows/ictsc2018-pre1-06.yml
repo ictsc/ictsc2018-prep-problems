@@ -38,9 +38,6 @@ rules:
         credit_percent: 100
 
 groups:
--
-    id: intro
-    pages:
 
 -
     id: quiz_start

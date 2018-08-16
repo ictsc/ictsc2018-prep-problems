@@ -39,10 +39,6 @@ rules:
 
 groups:
 -
-    id: intro
-    pages:
-
--
     id: quiz_start
     shuffle: false
     pages:

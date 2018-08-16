@@ -11,5 +11,6 @@ prompt: |
         
         なんでかVMが起動できないとき、見ないといけないログファイルはどれ？（記述式）
 
-answers:
-    - <plain> Answer
+rubric: |
+    採点基準
+

@@ -22,6 +22,6 @@ prompt: |
     また，tcpdumpでinteface eth0から取得して、宛先アドレスは192.168.2.200または192.168.1.100,tcpでポートは80と言う条件ででフィルタリングして表示せよ(記述式)
 
 
-answers:
-    - <plain> Answer
+rubric:
+    採点基準
    

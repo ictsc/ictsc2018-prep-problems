@@ -48,6 +48,10 @@ groups:
 
     -
         {{ indented_include("questions/01-q1.yml", 8) }}
+    -
+        {{ indented_include("questions/01-q2.yml", 8) }}
+    -
+        {{ indented_include("questions/01-q3.yml", 8) }}
 
 
 completion_text: |
@@ -55,4 +59,4 @@ completion_text: |
     ### お疲れ様でした!
     他のコースも忘れずに解答をお願いします。
 
-    
+

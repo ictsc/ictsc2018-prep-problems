@@ -1,0 +1,31 @@
+type: MultipleChoiceQuestion
+id: 01_q2
+value: 10
+shuffle: false
+credit_mode: exact
+prompt: |
+
+        ### Docker問題 No.2
+
+        Docker Swarm に関する以下の記述のうち、正しいものを選択せよ。(複数選択可)<br>
+
+        a. Docker Swarm ではサービスのイメージタグに latest を指定すると、常に最新のイメージを用いてコンテナがデプロイされる。
+        b. Docker Swarm では標準で IPIP トンネリングを用いてノードを跨いだコンテナ間の通信を提供する。
+        c. Docker Swarm ではマネージャー(クラスタを管理するノード)と非マネージャー(コンテナを実行するノード)の役割を同一のホストに割り当てることができる。
+        d. Docker Swarm では非マネージャーの数より多い数のレプリカを指定したサービスを作成できる。
+
+choices:
+
+    - a
+    - ~CORRECT~ b
+    - ~CORRECT~ c
+    - d
+
+answer_explanation: |
+    正解はbです。<br>
+    <br>
+    a: 誤りです。ただし、 `update` サブコマンドにおいて `--force` オプションを使用すると強制的に最新のイメージが pull されます。<br>
+    b: 誤りです。標準では VXLAN トンネルが使用されます。<br>
+    c: 正しいです。<br>
+    d: 正しいです。このときには同一サービスのコンテナが複数起動されるノードが生じます。<br>
+    <br/>

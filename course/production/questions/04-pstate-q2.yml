@@ -1,5 +1,5 @@
 type: HumanGradedTextQuestion
-id: 04_qstate_q2
+id: 04_pstate_q2
 value: 10
 widget: textarea
 prompt: |
@@ -8,6 +8,6 @@ prompt: |
 
         実技問題の「BGP」の解答を書いてください
 
-answers:
-    - <plain> Answer
+rubric: |
+        Answer
 

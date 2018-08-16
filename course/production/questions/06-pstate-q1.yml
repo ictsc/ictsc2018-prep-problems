@@ -1,5 +1,5 @@
 type: HumanGradedTextQuestion
-id: 06_qstate_q1
+id: 06_pstate_q1
 value: 10
 widget: textarea
 prompt: |
@@ -8,6 +8,6 @@ prompt: |
 
         実技問題の「ワンコインステータス？」の解答を書いてください
 
+rubric: |
+        Answer
 
-answers:
-    - <plain> Answer

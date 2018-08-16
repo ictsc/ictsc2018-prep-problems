@@ -1,5 +1,5 @@
 type: HumanGradedTextQuestion
-id: 01_qstate_q1
+id: 01_pstate_q1
 value: 10
 widget: textarea
 prompt: |
@@ -8,5 +8,6 @@ prompt: |
 
         実技問題の「VyOSにpingが通らない！」の解答を書いてください
 
-answers:
-    - <plain> Answer
+rubric: |
+        Answer
+

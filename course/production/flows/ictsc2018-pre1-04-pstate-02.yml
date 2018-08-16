@@ -29,7 +29,7 @@ rules:
         message: "ICTSC2018 １次予選 Network 実技2"
         permissions: [view, submit_answer]
 
-    grade_identifier: ictsc2018_prep01_prob04_reharsal
+    grade_identifier: ictsc2018_prep01_prob04_pstate02
     grade_aggregation_strategy: use_latest
 
     grading:

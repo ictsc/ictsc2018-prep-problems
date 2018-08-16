@@ -30,7 +30,7 @@ rules:
         message: "ICTSC2018 １次予選　Xen"
         permissions: [view, submit_answer]
 
-    grade_identifier: ictsc2018_prep01_prob05_reharsal
+    grade_identifier: ictsc2018_prep01_prob05_relate
     grade_aggregation_strategy: use_latest
 
     grading:

@@ -29,7 +29,7 @@ rules:
         message: "ICTSC2018 １次予選 Packet Filter 実技"
         permissions: [view, submit_answer]
 
-    grade_identifier: ictsc2018_prep01_prob07_reharsal
+    grade_identifier: ictsc2018_prep01_prob07_pstate01
     grade_aggregation_strategy: use_latest
 
     grading:

@@ -5,19 +5,42 @@ shuffle: true
 prompt: |
 
         ### Xen問題 No.1
-        #### Xenの知識問題-1
 
-        作者 @acque.2two
-        
-        Xenがそもそも何者で、どうやって構築するか知ってる？（選択式）
-
+        LinuxカーネルでXenが動作するアーキテクチャとして最も近いものを答えてください。
 
 choices:
+  - KVM
+  - Docker
+  - VirtualBox
+  - ~correct~ Hyper-V
+  - VMware ESXi
 
-  - ~CORRECT~ Answer-01
-  - Answer-02
-  - Answer-03
-  - Answer-04
-
-answer_explanation:
-  Answer-01<br/>
+answer_explanation: |
+    LinuxカーネルでXen上でPVMが動作するアーキテクチャとして最も近いものを答えてください。
+    - KVM
+    - Docker
+    - VirtualBox
+    - ~correct~ Hyper-V
+    - VMware ESXi
+    - OpenVZ
+    
+    
+    http://www.pg-direct.jp/blog/?p=3183
+    
+    - KVM
+        + モノシリック型ハイパーバイザ
+    + Docker
+        + アプリケーションコンテナ
+    + VirtualBox
+        + 基本的にはQemuと同じような「ハイパーバイザ」の存在しないVM
+    + Hyper-V
+        + マイクロカーネル型ハイパーバイザ Xenと同じ
+    + VMware ESXi
+        + モノシリック型ハイパーバイザ
+    + OpenVZ
+        + OSコンテナ
+    
+    Docker, OpenVZと言ったソフトはコンテナ仮想化であり、カーネルを全ての仮想マシンで共有してユーザ空間を隔離する技術です。
+    VirtualBoxはQemuと同じように、OSの上でソフトウェアを起動し、OSの機能を利用して仮想化を行う技術です。
+    KVM・VMware ESXiと言ったソフトは、仮想化とその管理の機能を含めたOS制御全ての機能をカーネルに含めたアーキテクチャです。
+    Xen, Hyper-Vと言ったソフトは、仮想化とハードウェア制御等のみをカーネルに内蔵し、管理機能などをまたVMとして起動する方式のアーキテクチャです。

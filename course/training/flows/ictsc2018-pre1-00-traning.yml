@@ -9,8 +9,7 @@ title: "ICTSC2018 １次予選 サンプル"
 #
 # So the '#' character below introduces a first-level headline (not a comment).
 description: |
-
-    # ICTSC2018 １次予選 Docker
+    # サンプル
 
 rules:
     start:

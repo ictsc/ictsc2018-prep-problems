@@ -1,4 +1,4 @@
-type: TextQuestion
+type: HumanGradedTextQuestion
 id: 05_q2
 value: 10
 widget: textarea

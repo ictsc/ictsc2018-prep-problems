@@ -1,0 +1,26 @@
+type: ChoiceQuestion
+id: 00_q2
+value: 10
+shuffle: true
+prompt: |
+
+    ### ルート情報の確認
+
+    Linuxでルート情報の確認を行いたい。<br/>
+    適切なコマンドは以下のうちどれか。<br/>
+    <br/>
+    <br/>
+
+choices:
+
+  - show ip route
+  - route print
+  - ~CORRECT~ ip route
+  - ip link
+  - 該当する選択肢は無し
+
+answer_explanation:
+
+    <b>「show ip route」</b>はCISCO機器などでルート情報を確認する際に使用するコマンドです。<br/>
+    <b>「route print」</b>はWindowsでルート情報を確認する際に使用するコマンドです。<br/>
+    <b>「ip link」</b>はLinuxでインタフェースのMACアドレスやMTUの情報を確認する際に使用するコマンドです。<br/>

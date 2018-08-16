@@ -2,7 +2,7 @@ chunks:
 
 -
     title: "ICTSC2018 １次予選 サンプル　トレーニング環境　デモ版"
-    id: ictsc2018-pre1-snmp
+    id: ictsc2018-pre1-traning
     rules:
     -
         if_after: 2018-08-05 15:30:00 +9

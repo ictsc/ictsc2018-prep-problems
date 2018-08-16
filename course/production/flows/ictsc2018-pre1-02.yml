@@ -60,13 +60,10 @@ groups:
     # them from other files, as below
 
     -
-        {{ indented_include("questions/nasuSNMP1.yml", 8) }}
+        {{ indented_include("questions/02-q1.yml", 8) }}
 
     -
-        {{ indented_include("questions/nasuSNMP2.yml", 8) }}
-
-    -
-        {{ indented_include("questions/nasuSNMP3.yml", 8) }}
+        {{ indented_include("questions/02-q2.yml", 8) }}
 
 
 completion_text: |

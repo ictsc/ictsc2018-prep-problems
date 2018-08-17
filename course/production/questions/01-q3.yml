@@ -7,7 +7,7 @@ prompt: |
         ### Docker問題 No.3
 
         以下に示す環境でイメージをビルドしたとき、期待される `docker run an_image ls -l / | grep hoge` コマンドの結果は選択肢のうちどれか。<br>
-        なお、 `alpine:3.4` イメージにおいて、 gid=20 は `dialout` group とする。
+        なお、 `alpine:3.6` イメージにおいて、 gid=20 は `dialout` group とする。
 
         ```
         # ls -l
@@ -26,7 +26,7 @@ prompt: |
         # cat Dockerfile
         FROM alpine:3.6
 
-        ADD hoge.tar.gz https://some_host/labo/tar/hoge.tar.gz /
+        ADD hoge.tar.gz https://some_host/hoge.tar.gz /
         # docker build -t an_image .
         ```
 

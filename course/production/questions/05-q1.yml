@@ -6,13 +6,13 @@ prompt: |
 
         ### Xen問題 No.1
 
-        LinuxカーネルでXenが動作するアーキテクチャとして最も近いものを答えてください。
+        LinuxカーネルでXenが動作するアーキテクチャに最も近いものを答えてください。
 
 choices:
   - KVM
   - Docker
   - VirtualBox
-  - ~correct~ Hyper-V
+  - ~CORRECT~ Hyper-V
   - VMware ESXi
 
 answer_explanation: |
@@ -28,15 +28,15 @@ answer_explanation: |
     http://www.pg-direct.jp/blog/?p=3183
     
     - KVM
-        + モノシリック型ハイパーバイザ
+        + ネイティブ型ハイパーバイザ
     + Docker
         + アプリケーションコンテナ
     + VirtualBox
         + 基本的にはQemuと同じような「ハイパーバイザ」の存在しないVM
     + Hyper-V
-        + マイクロカーネル型ハイパーバイザ Xenと同じ
+        + ホスト型ハイパーバイザ Xenと同じ
     + VMware ESXi
-        + モノシリック型ハイパーバイザ
+        + ネイティブ型ハイパーバイザ
     + OpenVZ
         + OSコンテナ
     

@@ -5,31 +5,29 @@ shuffle: true
 prompt: |
 
     ### Packet filtering問題 No.2(続き)
-    
-    作者@takemioIO
-
-    問題2. 突然ですがあなたは学内ネットワークの管理者になりました．そこでは`sshなんて通しちゃダメ`という謎の言葉があるドキュメントがあり，あなたはそれに従う必要が出てきました．
-    前述したコードには<1>,<2>,<3>という穴があり，そこを選択肢から一つ選んで埋めてください
-    #### 選択肢
-    - A
-        - <1>:`22`
-        - <2>:`tcpLayer != nil`
-        - <3>:`isSelecteExcludedInMACAddr(&packet, ethernetPacket.SrcMAC.String())`
-
-    - B
-        - <1>:`80`
-        - <2>:`ethernetLayer != nil`
-        - <3>:`isSelecteExcludedInMACAddr(&packet, ethernetPacket.SrcMAC.String())`
-    - C
-        - <1>:`23`
-        - <2>:`tcpLayer != nil`
-        - <3>:`isSelectedExcludeInIP(&packet, ip.SrcIP.String())`
-    - D
-        - <1>:`22`
-        - <2>:`tcpLayer != nil`
-        - <3>:`isSelectedExcludeInPort(&packet, tcp.SrcPort.String())`
-
-    #### コード(前回ページのコードと同一)
+    <br/>
+    突然ですがあなたは学内ネットワークの管理者になりました．そこでは`sshなんて通しちゃダメ`という謎の言葉があるドキュメントがあり，あなたはそれに従う必要が出てきました．<br/>
+    前述したコードには<1>,<2>,<3>という穴があり，そこを選択肢から一つ選んで埋めてください<br/>
+    #### 選択肢<br/>
+    - A<br/>
+        - <1>:`22`<br/>
+        - <2>:`tcpLayer != nil`<br/>
+        - <3>:`isSelecteExcludedInMACAddr(&packet, ethernetPacket.SrcMAC.String())`<br/>
+    <br/>
+    - B<br/>
+        - <1>:`80`<br/>
+        - <2>:`ethernetLayer != nil`<br/>
+        - <3>:`isSelecteExcludedInMACAddr(&packet, ethernetPacket.SrcMAC.String())`<br/>
+    - C<br/>
+        - <1>:`23`<br/>
+        - <2>:`tcpLayer != nil`<br/>
+        - <3>:`isSelectedExcludeInIP(&packet, ip.SrcIP.String())`<br/>
+    - D<br/>
+        - <1>:`22`<br/>
+        - <2>:`tcpLayer != nil`<br/>
+        - <3>:`isSelectedExcludeInPort(&packet, tcp.SrcPort.String())`<br/>
+    <br/>
+    #### コード(前回ページのコードと同一)<br/>
     ``` go
     package main
 
@@ -96,7 +94,7 @@ prompt: |
         }
     }
     ```
-
+    <br/><br/>
 choices:
 
   - A

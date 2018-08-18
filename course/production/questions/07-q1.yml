@@ -1,15 +1,13 @@
-type: ChoiceQuestion
+type: HumanGradedTextQuestion
 id: 07_q1
 value: 10
-shuffle: true
+widget: textedit
 prompt: |
 
     ### Packet filtering問題 No.1
 
-    ### 問題1
-
-    あなたはWebサービスを作っている。0.0.0.0:80でnginxが待ち受けしていて、localhost:8080で動いているサービスにproxyするようにしたいのだが、何故か動かない。原因を特定し、正常に動作するために必要な手順を説明せよ。なお、nginxは適切に設定がなされているものとする。
-
+    あなたはWebサービスを作っている。0.0.0.0:80でnginxが待ち受けしていて、localhost:8080で動いているサービスにproxyするようにしたいのだが、何故か動かない。原因を特定し、正常に動作するために必要な手順を説明せよ。なお、nginxは適切に設定がなされているものとする。<br/>
+    <br/>
     ```
     root@ubuntu:/etc/nginx/sites-enabled# systemctl status nginx
     ● nginx.service - A high performance web server and a reverse proxy server
@@ -25,13 +23,13 @@ prompt: |
                ├─1396 nginx: worker process
                └─1397 nginx: worker process
     ```
-    
+    <br/>
     ```
     root@ubuntu:/etc/nginx/sites-enabled# ps ax | grep 8080
      2750 pts/0    S      0:00 python3 -m http.server 8080
      2762 pts/0    S+     0:00 grep --color=auto 8080
     ```
-
+    <br/>
     ```
     root@ubuntu:/etc/nginx/sites-enabled# iptables -t filter -L -v
     Chain INPUT (policy DROP 46 packets, 4344 bytes)
@@ -81,14 +79,7 @@ prompt: |
     Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
      pkts bytes target     prot opt in     out     source               destination    
     ```
+    <br/><br/>
 
-
-choices:
-
-  - ~CORRECT~ Answer-01
-  - Answer-02
-  - Answer-03
-  - Answer-04
-
-answer_explanation:
+rubric: |
   Answer-01<br/>

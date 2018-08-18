@@ -4,8 +4,8 @@ value: 10
 shuffle: true
 prompt: |
     
-    ### ホスト名のOIDは？
-    対象機器のホスト名(sysName)がわかるOIDが下記のうちからどれか<br/>
+    ### SNMP問題 No.2 ホスト名のOIDは？
+    対象機器のホスト名(sysName)を取得するOIDは次のうちどれでしょうか。
     <br/>
     <br/>
 choices:

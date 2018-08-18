@@ -4,8 +4,8 @@ value: 10
 shuffle: true
 prompt: |
     
-    ### SNMPのポート番号
-    SNMPが使うポート番号はどれか。<br/>
+    ### SNMP問題 No.1 SNMPのポート番号
+    SNMPが使うポート番号は次のうちどれでしょうか。<br/>
     <br/>
     <br/>
 choices:

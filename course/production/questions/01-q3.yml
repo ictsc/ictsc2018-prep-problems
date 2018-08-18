@@ -6,8 +6,8 @@ prompt: |
 
         ### Docker問題 No.3
 
-        以下に示す環境でイメージをビルドしたとき、期待される `docker run an_image ls -l / | grep hoge` コマンドの結果は選択肢のうちどれか。<br>
-        なお、 `alpine:3.4` イメージにおいて、 gid=20 は `dialout` group とする。<br/>
+        以下に示す環境でイメージをビルドしたとき、期待される `docker run an_image ls -l / | grep hoge` コマンドの結果は選択肢のうちどれでしょう。<br>
+        ここでは、 `alpine:3.4` イメージにおいて、 gid=20 は `dialout` group とします。<br/>
         <br/>
         ```
         # ls -l

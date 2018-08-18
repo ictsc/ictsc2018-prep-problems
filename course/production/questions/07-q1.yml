@@ -6,7 +6,11 @@ prompt: |
 
     ### Packet filtering問題 No.1
 
-    あなたはWebサービスを作っている。0.0.0.0:80でnginxが待ち受けしていて、localhost:8080で動いているサービスにproxyするようにしたいのだが、何故か動かない。原因を特定し、正常に動作するために必要な手順を説明せよ。なお、nginxは適切に設定がなされているものとする。<br/>
+    あなたはWebサービスを作っています。<br/>
+    このサーバーではnginxが0.0.0.0:80で通信待ち受けしています。このnginxを用いて<br/>
+    localhost:8080で動いているサービスにproxyするようにしたいのですが、何故か正常に動作しません。<br/>
+    原因を特定し、正常に動作するために必要な手順を説明してください。<br/>
+    なお、nginxは適切に設定がなされているものとします。<br/>
     <br/>
     ```
     root@ubuntu:/etc/nginx/sites-enabled# systemctl status nginx

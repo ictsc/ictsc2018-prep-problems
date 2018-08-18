@@ -1,0 +1,17 @@
+Router-Bから対外疎通がとれるようにしたい。
+Router-AにNATの設定を書き加え、例えばRouter-Bからipアドレス8.8.8.8へpingを飛ばせるようにしてください。
+
+[ここにトポ図]
+https://wiki.icttoracon.net/ictsc2018/preliminary-round1/problems/network/nat
+
+
+Router-A
+ipアドレス：10.0.0.200
+ユーザ名：nat
+パスワード：uBXKR7bK
+enableパスワード：nat
+
+Router-B
+ ipアドレス：admin
+ユーザ名：192.168.0.200
+パスワード：4erqz8tu

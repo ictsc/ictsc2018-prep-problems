@@ -1,0 +1,85 @@
+「SNMPで監視ができない」
+
+この問題はトラブルが2つに分かれています。
+これらのトラブルを別々にメールで送信しても構いません。
+その場合、メールの本文に「どちらのトラブルについての回答・質問か」を明記していただきますようよろしくお願いいたします。
+
+### トラブル1
+ZabbixからSNMPを用いてVyOSを監視したいと思い設定を行いましたが、うまく監視できません。原因を突きとめ、修正してください。
+踏み台サーバにアクセスして以下のサーバにアクセスしてトラブルシュートすることができる
+
+
+サーバーへのアクセス情報
+  踏み台サーバから以下のサーバにアクセスすることができます。
+  1. zabbix
+    Address: 192.168.0.5
+    User: admin
+    Password: fG9bycDJ
+    ZabbixのURL: https://192.168.0.5:8080
+    ZabbixのログインID: admin
+    Zabbixのパスワード: zabbix
+  2. vyos
+    Address: 192.168.0.10
+    User: admin
+    Password: fG9bycDJ
+    SNMPのCommunity名: ictsc2018-pre1
+
+
+ゴール
+  zabbixのホスト一覧からvyosのSNMPの監視のところが赤色から緑色になればOK
+
+
+
+### トラブル2
+
+以前からZabbixでは監視がいけてないと感じたため、
+GrafanaというOSSをdocker-composeで構築・可視化をしていましたが、
+先日Grafanaのアップデートが来ていたのでコンテナをアップデートしたところ起動できなくなってしまいました。
+原因を突きとめ、修正してください。
+
+情報
+  バージョンアップ前のdocker-composeで使用するファイルはdocker-compose.yml.oldです。
+  バージョンアップ後のdocker-composeで使用するファイルはdocker-compose.ymlです。
+  新しいファイルを使用してdocker-compose up -dを実行するとエラーが発生します。
+
+
+サーバーへのアクセス情報
+  踏み台サーバから以下のサーバにアクセスすることができます。
+  1. zabbix
+    Address: 192.168.0.5
+    User: admin
+    Password: fG9bycDJ
+    ZabbixのURL: https://192.168.0.5:8080
+    ZabbixのログインID: admin
+    Zabbixのパスワード: zabbix
+  2. vyos
+    Address: 192.168.0.10
+    User: admin
+    Password: fG9bycDJ
+    SNMPのCommunity名: ictsc2018-pre1
+  3. grafanaサーバ
+    Address：192.168.0.6
+    User:admin
+    Password: fG9bycDJ
+    GrafanaのURL: 192.168.0.6
+    GrafanaのユーザID: admin
+    Grafanaのパスワード: grafana
+
+
+ゴール
+  Grafanaが起動ができてwebでログイン画面が見れればおｋ
+
+
+—
+件名: [ICTSC2018-予選1][問1-P1][TEAM（チーム番号）][ANSWER] Kubernetes上のWordpressにアクセスできない
+本文: 内容は基本自由ですが、記録(どのようなコマンドで作業を行ったか等)を必ず記入してください。
+—
+
+
+また、質問がある場合はyosen@icttoracon.net 宛に以下の内容で質問のメールを送信してください。
+
+—
+件名: [ICTSC2018-予選1][問1-P1][TEAM（チーム番号）][QUESTION] Kubernetes上のWordpressにアクセスできない
+本文: 質問内容を記載してください。
+―
+

@@ -6,7 +6,7 @@ prompt: |
 
     ### Packet filtering問題 No.3(続き)
 
-    フィルタリングの技術としてeBPF(extend Berkeley　Packet Filter)というものがあります。<br/>
+    フィルタリングの技術としてBPF(Berkeley Packet Filter)というものがあります。<br/>
     BPFはレジスタマシーンとして命令を受理して動作が行われます。
     これを踏まえると<br/>
     tcpdumpはフィルタ条件式のパーサーとそれをコンパイルすることのできるある種のドメイン言語ともいうことができ、<br/>

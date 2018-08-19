@@ -13,7 +13,7 @@ choices:
   - Docker
   - VirtualBox
   - ~CORRECT~ Hyper-V
-  - VMware ESXi
+  - OpenVZ
 
 answer_explanation: |
     LinuxカーネルでXen上でPVMが動作するアーキテクチャとして最も近いものを答えてください。
@@ -21,7 +21,6 @@ answer_explanation: |
     - Docker
     - VirtualBox
     - ~correct~ Hyper-V
-    - VMware ESXi
     - OpenVZ
     
     
@@ -29,18 +28,23 @@ answer_explanation: |
     
     - KVM
         + ネイティブ型ハイパーバイザ
+        + モノリシックカーネルアーキテクチャ
     + Docker
         + アプリケーションコンテナ
     + VirtualBox
-        + 基本的にはQemuと同じような「ハイパーバイザ」の存在しないVM
+        + ホスト型ハイパーバイザ
     + Hyper-V
-        + ホスト型ハイパーバイザ Xenと同じ
-    + VMware ESXi
         + ネイティブ型ハイパーバイザ
+        + マイクロカーネルアーキテクチャ
     + OpenVZ
         + OSコンテナ
     
     Docker, OpenVZと言ったソフトはコンテナ仮想化であり、カーネルを全ての仮想マシンで共有してユーザ空間を隔離する技術です。
     VirtualBoxはQemuと同じように、OSの上でソフトウェアを起動し、OSの機能を利用して仮想化を行う技術です。
-    KVM・VMware ESXiと言ったソフトは、仮想化とその管理の機能を含めたOS制御全ての機能をカーネルに含めたアーキテクチャです。
-    Xen, Hyper-Vと言ったソフトは、仮想化とハードウェア制御等のみをカーネルに内蔵し、管理機能などをまたVMとして起動する方式のアーキテクチャです。
+    KVM・Xen・Hyper-Vと言ったソフトは、仮想化とその管理の機能を含めたOS制御全ての機能をカーネルに含めたアーキテクチャです。
+    このうち、KVMでは管理カーネル上でその他のプログラムが動作しますが、
+    Xenではdom0と呼ばれる管理用の仮想マシンが作成され、その上でカーネルに対して仮想化サーバーの起動などを命令します。
+    Hyper-VはXenと同様に、管理を行うための仮想マシンが作成され、その上で管理用のプログラムやGUIが動作しています。
+
+    Xenでは、管理用の仮想マシンをDomain-0(dom0)、その他の仮想マシンをDomain-U(domU)と呼び、
+    Hyper-Vではそれぞれ親パーティション (Root Partition, Parent Partition)、子パーティション (Child Partition)と呼びます。

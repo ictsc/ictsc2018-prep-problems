@@ -1,7 +1,7 @@
 type: HumanGradedTextQuestion
 id: 07_q1
 value: 10
-widget: textedit
+widget: textarea
 prompt: |
 
     ### Packet filtering問題 No.1

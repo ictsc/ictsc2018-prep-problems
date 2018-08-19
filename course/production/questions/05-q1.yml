@@ -5,46 +5,19 @@ shuffle: true
 prompt: |
 
         ### Xen問題 No.1
+        #### Xenの知識問題-1
 
-        LinuxカーネルでXenが動作するアーキテクチャに最も近いものを答えてください。
+        作者 @acque.2two
+        
+        Xenがそもそも何者で、どうやって構築するか知ってる？（選択式）
+
 
 choices:
-  - KVM
-  - Docker
-  - VirtualBox
-  - ~CORRECT~ Hyper-V
-  - OpenVZ
 
-answer_explanation: |
-    LinuxカーネルでXen上でPVMが動作するアーキテクチャとして最も近いものを答えてください。
-    - KVM
-    - Docker
-    - VirtualBox
-    - ~correct~ Hyper-V
-    - OpenVZ
-    
-    
-    http://www.pg-direct.jp/blog/?p=3183
-    
-    - KVM
-        + ネイティブ型ハイパーバイザ
-        + モノリシックカーネルアーキテクチャ
-    + Docker
-        + アプリケーションコンテナ
-    + VirtualBox
-        + ホスト型ハイパーバイザ
-    + Hyper-V
-        + ネイティブ型ハイパーバイザ
-        + マイクロカーネルアーキテクチャ
-    + OpenVZ
-        + OSコンテナ
-    
-    Docker, OpenVZと言ったソフトはコンテナ仮想化であり、カーネルを全ての仮想マシンで共有してユーザ空間を隔離する技術です。
-    VirtualBoxはQemuと同じように、OSの上でソフトウェアを起動し、OSの機能を利用して仮想化を行う技術です。
-    KVM・Xen・Hyper-Vと言ったソフトは、仮想化とその管理の機能を含めたOS制御全ての機能をカーネルに含めたアーキテクチャです。
-    このうち、KVMでは管理カーネル上でその他のプログラムが動作しますが、
-    Xenではdom0と呼ばれる管理用の仮想マシンが作成され、その上でカーネルに対して仮想化サーバーの起動などを命令します。
-    Hyper-VはXenと同様に、管理を行うための仮想マシンが作成され、その上で管理用のプログラムやGUIが動作しています。
+  - ~CORRECT~ Answer-01
+  - Answer-02
+  - Answer-03
+  - Answer-04
 
-    Xenでは、管理用の仮想マシンをDomain-0(dom0)、その他の仮想マシンをDomain-U(domU)と呼び、
-    Hyper-Vではそれぞれ親パーティション (Root Partition, Parent Partition)、子パーティション (Child Partition)と呼びます。
+answer_explanation:
+  Answer-01<br/>

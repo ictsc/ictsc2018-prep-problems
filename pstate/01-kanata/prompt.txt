@@ -12,6 +12,11 @@ Kubernetes クラスタ環境を移行後、Kubernetes上のWordPressにアク�
   * Address Range: Kubernetes Node に振られるアドレスのレンジ。
   * Cluster Address Range: Kubernetes Service に振られるアドレスのレンジ。
 
+  WordPress へのアクセス方法: VNC 踏み台サーバ上のブラウザにて「192.168.0.1:30080」へアクセス
+
+  Kubernetes上に展開されているDeploymentやService等のリソースは
+  すべて /root/manifests/ 以下に配置されたyamlファイルから生成されたものです。
+
 サーバーへのアクセス情報
   踏み台サーバから以下のサーバにアクセスすることができます。
   1. kube01 (Kubernetes Master & Node)
@@ -29,11 +34,22 @@ Kubernetes クラスタ環境を移行後、Kubernetes上のWordPressにアク�
     User: root
     Password: kubernetes
 
-WordPress へのアクセス方法: VNC 踏み台サーバ上のブラウザにて「192.168.0.1:30080」へアクセス
-
-Kubernetes上に展開されているDeploymentやService等のリソースは
-すべて /root/manifests/ 以下に配置されたyamlファイルから生成されたものです。
 
 ゴール
   VNC 踏み台サーバ上のブラウザにて「192.168.0.1:30080」を入力することで、WordPressの画面が表示される
+
+
+
+—
+件名: [ICTSC2018-予選1][問1-P2][TEAM（チーム番号）][ANSWER] Kubernetes上のWordpressにアクセスできない
+本文: 内容は基本自由ですが、記録(どのようなコマンドで作業を行ったか等)を必ず記入してください。
+—
+
+
+また、質問がある場合はyosen@icttoracon.net 宛に以下の内容で質問のメールを送信してください。
+
+—
+件名: [ICTSC2018-予選1][問1-P2][TEAM（チーム番号）][QUESTION] Kubernetes上のWordpressにアクセスできない
+本文: 質問内容を記載してください。
+―
 

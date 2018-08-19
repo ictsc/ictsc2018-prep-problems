@@ -70,8 +70,11 @@ GrafanaというOSSをdocker-composeで構築・可視化をしていました�
   Grafanaが起動ができてwebでログイン画面が見れればおｋ
 
 
+完了した際には、yosen@icttoracon.net 宛に以下の内容で完了報告のメールを送信してください。
+
+
 —
-件名: [ICTSC2018-予選1][問1-P1][TEAM（チーム番号）][ANSWER] Kubernetes上のWordpressにアクセスできない
+件名: [ICTSC2018-予選1][問2-P1][TEAM（チーム番号）][ANSWER] SNMPで監視ができない
 本文: 内容は基本自由ですが、記録(どのようなコマンドで作業を行ったか等)を必ず記入してください。
 —
 
@@ -79,7 +82,7 @@ GrafanaというOSSをdocker-composeで構築・可視化をしていました�
 また、質問がある場合はyosen@icttoracon.net 宛に以下の内容で質問のメールを送信してください。
 
 —
-件名: [ICTSC2018-予選1][問1-P1][TEAM（チーム番号）][QUESTION] Kubernetes上のWordpressにアクセスできない
+件名: [ICTSC2018-予選1][問2-P1][TEAM（チーム番号）][QUESTION] SNMPで監視ができない
 本文: 質問内容を記載してください。
 ―
 

@@ -23,15 +23,12 @@ https://drive.google.com/open?id=1-xHKDiZ8bNDwsNIRcDm_ev4-I9TOrZqp
   Serverから10.0.0.254にpingが通ること
 
 
-完了した際には、yosen@icttoracon.net 宛に以下の内容で完了報告のメールを送信してください。
 
-—
-件名: [ICTSC2018-予選1][問1-P1][TEAM（チーム番号）][ANSWER] VyOSにpingが通らない！
-本文: 内容は基本自由ですが、記録(どのようなコマンドで作業を行ったか等)を必ず記入してください。
-—
+完了した際には、文章問題(relate)のサービスで完了報告をお願いします。
+内容は基本自由ですが、記録(どのようなコマンドで作業を行ったか等)を必ず記入してください。
 
 
-また、質問がある場合はyosen@icttoracon.net 宛に以下の内容で質問のメールを送信してください。
+質問がある場合はyosen@icttoracon.net 宛に以下の内容で質問のメールを送信してください。
 
 —
 件名: [ICTSC2018-予選1][問1-P1][TEAM（チーム番号）][QUESTION] VyOSにpingが通らない！

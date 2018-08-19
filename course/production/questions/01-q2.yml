@@ -17,12 +17,12 @@ prompt: |
 choices:
 
     - a
-    - ~CORRECT~ b
+    - b
     - ~CORRECT~ c
-    - d
+    - ~CORRECT~ d
 
 answer_explanation: |
-    正解はbです。<br>
+    正解はc, dです。<br>
     <br>
     a: 誤りです。ただし、 `update` サブコマンドにおいて `--force` オプションを使用すると強制的に最新のイメージが pull されます。<br>
     b: 誤りです。標準では VXLAN トンネルが使用されます。<br>

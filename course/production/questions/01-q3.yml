@@ -7,26 +7,31 @@ prompt: |
         ### Docker問題 No.3
 
         以下に示す環境でイメージをビルドしたとき、期待される `docker run an_image ls -l / | grep hoge` コマンドの結果は選択肢のうちどれでしょう。<br>
-        ここでは、 `alpine:3.4` イメージにおいて、 gid=20 は `dialout` group とします。<br/>
         <br/>
+
         ```
         # ls -l
         total 16
-        -rw-r--r--  1 502  20   296  8 16 19:17 Dockerfile
-        -rw-r--r--  1 502  20  3072  8 16 19:09 hoge.tar.gz
+        -rw-r--r--    1 root     root            66 Aug 16 10:09 Dockerfile
+        -rw-r--r--    1 root     root          3072 Aug 16 10:09 hoge.tar.gz
+
         # tar tvf hoge.tar.gz
-        drwxr-xr-x  0 502 20     0  8 16 19:09 hoge/
-        -rw-r--r--  0 502 20     0  8 16 18:41 hoge/a
-        -rw-r--r--  0 502 20     0  8 16 18:41 hoge/b
+        drwxr-xr-x guest/users         0 2018-03-03 23:55:03 hoge/
+        -rw-r--r-- guest/users         0 2016-02-27 05:03:30 hoge/a
+        -rw-r--r-- guest/users         0 2016-08-28 20:32:45 hoge/b
+
         # curl https://some_host/hoge.tar.gz > remote_hoge.tar.gz
+
         # tar tvf remote_hoge.tar.gz
-        drwxr-xr-x  0 1001 0     0  8 16 19:16 hoge/
-        -rw-r--r--  0 1001 0     0  8 16 19:16 hoge/a
-        -rw-r--r--  0 1001 0     0  8 16 19:16 hoge/b
+        drwxr-xr-x root/root         0 2018-03-03 10:16:31 hoge/
+        -rw-r--r-- root/root         0 2017-03-07 10:00:00 hoge/a
+        -rw-r--r-- root/root         0 2017-08-26 15:37:42 hoge/b
+
         # cat Dockerfile
         FROM alpine:3.6
 
-        ADD hoge.tar.gz https://some_host/labo/tar/hoge.tar.gz /
+        ADD hoge.tar.gz https://some_host/hoge.tar.gz /
+
         # docker build -t an_image .
         ```
         <br/>
@@ -37,7 +42,7 @@ prompt: |
         <br/>
         2.
         ```
-        drwxr-xr-x    1 502      dialout       4096 Aug 16 10:09 hoge
+        drwxr-xr-x    1 guest    users         4096 Aug 16 10:09 hoge
         ```
         <br/>
         3.
@@ -47,19 +52,19 @@ prompt: |
         <br/>
         4.
         ```
-        -rw-------    1 502      dialout       3072 Aug 16 10:09 hoge.tar.gz
+        -rw-------    1 guest    users         3072 Aug 16 10:09 hoge.tar.gz
         ```
         <br/>
         5.
         ```
-        drwxr-xr-x    1 502      dialout       4096 Aug 16 10:09 hoge
+        drwxr-xr-x    1 guest    users         4096 Aug 16 10:09 hoge
         -rw-------    1 root     root          3072 Aug 16 10:09 hoge.tar.gz
         ```
         <br/>
         6.
         ```
         drwxr-xr-x    1 root     root          4096 Aug 16 10:09 hoge
-        -rw-------    1 502      dialout       3072 Aug 16 10:09 hoge.tar.gz
+        -rw-------    1 guest    users         3072 Aug 16 10:09 hoge.tar.gz
         ```
         <br/><br/>
 choices:

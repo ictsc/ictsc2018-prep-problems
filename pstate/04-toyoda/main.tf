@@ -28,7 +28,7 @@ resource sakuracloud_note "vnc-init" {
 
 # vnc archive
 data sakuracloud_archive "vnc-archive" {
-  name_selectors = ["VNC", "IMG", "V3"]
+  name_selectors = ["VNC", "IMG", "V4"]
 }
 
 # switch

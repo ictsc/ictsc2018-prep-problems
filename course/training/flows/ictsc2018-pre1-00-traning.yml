@@ -26,7 +26,7 @@ rules:
 
     access:
     -
-        message: "ICTSC2018 １次予選　サンプルr"
+        message: "ICTSC2018 １次予選　サンプル"
         permissions: [view, submit_answer]
 
     grade_identifier: ictsc2018_prep01_traning

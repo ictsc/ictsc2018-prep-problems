@@ -1,0 +1,12 @@
+type: HumanGradedTextQuestion
+id: q1
+value: 10
+widget: textarea
+prompt: |
+
+        ### Sample Question
+
+        Please write answer
+
+rubric: |
+        Answer

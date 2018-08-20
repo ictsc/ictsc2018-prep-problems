@@ -1,0 +1,14 @@
+chunks:
+
+-
+    title: "ICTSC2018 再回答テスト"
+    id: ictsc2018-pre1-snmp
+    rules:
+    -
+        if_after: 2018-08-05 15:30:00 +9
+        if_before: 2018-09-05 14:30:00 +9
+        weight: 100
+    -
+        weight: 0
+    content: |
+        * [Sample](flow:sample.yml)

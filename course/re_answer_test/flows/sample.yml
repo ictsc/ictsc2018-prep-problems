@@ -1,0 +1,46 @@
+{% from "yaml-macros.yml" import indented_include %}
+
+title: "Sample"
+description: |
+    # ICTSC2018 １次予選 sample
+
+rules:
+    start:
+    -
+        if_before: end_week 1
+        if_has_role: [student, ta, instructor]
+        if_has_in_progress_session: False
+        may_start_new_session: True
+        may_list_existing_sessions: True
+    -
+        if_has_in_progress_session: True
+        may_start_new_session: True
+        may_list_existing_sessions: False
+
+    access:
+    -
+        message: "Sample Flow"
+        permissions: [view, submit_answer]
+
+    grade_identifier: sample
+    grade_aggregation_strategy: use_latest
+
+    grading:
+    -
+        credit_percent: 100
+
+groups:
+
+-
+    id: quiz_start
+    shuffle: false
+    pages:
+
+
+    -
+        {{ indented_include("questions/q1.yml", 8) }}
+
+completion_text: |
+
+    ### お疲れ様でした!
+    他のコースも忘れずに解答をお願いします。

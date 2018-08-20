@@ -11,4 +11,4 @@ chunks:
     -
         weight: 0
     content: |
-        * [Sample](flow:sample.yml)
+        * [Sample](flow:sample)

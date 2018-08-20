@@ -43,10 +43,6 @@ Kubernetes クラスタ環境を移行後、Kubernetes上のWordPressにアク�
 内容は基本自由ですが、記録(どのようなコマンドで作業を行ったか等)を必ず記入してください。
 
 
-質問がある場合はyosen@icttoracon.net 宛に以下の内容で質問のメールを送信してください。
-
-—
-件名: [ICTSC2018-予選1][問1-P2][TEAM（チーム番号）][QUESTION] Kubernetes上のWordpressにアクセスできない
-本文: 質問内容を記載してください。
-―
+質問がある場合は配布資料でお伝えしている通り
+yosen@icttoracon.net宛に質問のメールを送信してください。
 

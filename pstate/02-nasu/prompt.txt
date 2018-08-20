@@ -41,23 +41,26 @@ GrafanaというOSSをdocker-composeで構築・可視化をしていました�
   バージョンアップ前のdocker-composeで使用するファイルはdocker-compose.yml.oldです。
   バージョンアップ後のdocker-composeで使用するファイルはdocker-compose.ymlです。
   新しいファイルを使用してdocker-compose up -dを実行するとエラーが発生します。
+  バージョンアップ前のdocker-compose.ymlを使うと古いバージョンで起動できます
+  ~/docker-compose/.volume/ にGrafanaコンテナで使うデータが入っています。
+    このデータは必ずアップデート後も引き継いでください
 
 
 サーバーへのアクセス情報
   踏み台サーバから以下のサーバにアクセスすることができます。
-  1. zabbix
+  1. Zabbix
     Address: 192.168.0.5
     User: admin
     Password: fG9bycDJ
     ZabbixのURL: https://192.168.0.5:8080
     ZabbixのログインID: admin
     Zabbixのパスワード: zabbix
-  2. vyos
+  2. VyOS
     Address: 192.168.0.10
     User: admin
     Password: fG9bycDJ
     SNMPのCommunity名: ictsc2018-pre1
-  3. grafanaサーバ
+  3. Grafanaサーバ
     Address：192.168.0.6
     User:admin
     Password: fG9bycDJ
@@ -66,18 +69,18 @@ GrafanaというOSSをdocker-composeで構築・可視化をしていました�
     Grafanaのパスワード: grafana
 
 
+禁止事項
+  ~/docker-compose/.volumeを削除する・アップデート後のコンテナで使わないというのは禁止です。
+  必ずGrafanaコンテナにマウントしてデータを引き継いでください。
+
 ゴール
-  Grafanaが起動ができてwebでログイン画面が見れればおｋ
+  Grafanaが無事起動ができ踏み台のVNCサーバのWebブラウザからGrafanaのコントロールパネルのログイン画面が見れればゴールです。
+
 
 
 完了した際には、文章問題(relate)のサービスで完了報告をお願いします。
 内容は基本自由ですが、記録(どのようなコマンドで作業を行ったか等)を必ず記入してください。
 
 
-また、質問がある場合はyosen@icttoracon.net 宛に以下の内容で質問のメールを送信してください。
-
-—
-件名: [ICTSC2018-予選1][問2-P1][TEAM（チーム番号）][QUESTION] SNMPで監視ができない
-本文: 質問内容を記載してください。
-―
-
+質問がある場合は配布資料でお伝えしている通り
+yosen@icttoracon.net宛に質問のメールを送信してください。

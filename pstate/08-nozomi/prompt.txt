@@ -20,3 +20,7 @@ Firefoxを利用しているユーザーがVideo Chatを開始することがで
   使用しているJavaScriptのコードは以下のURLからダウンロードできます。
   https://drive.google.com/open?id=1OlXSVE4aWm8B0AmpMrDFmyKqrxlKqww9
 
+
+質問がある場合は配布資料でお伝えしている通り
+yosen@icttoracon.net宛に質問のメールを送信してください。
+

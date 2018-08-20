@@ -1,7 +1,7 @@
 type: HumanGradedTextQuestion
 id: 05_q4
 value: 10
-shuffle: true
+widget: textarea
 prompt: |
 
         ### Xen問題 No.4

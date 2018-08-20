@@ -1,7 +1,7 @@
 type: HumanGradedTextQuestion
 id: 05_q3
 value: 10
-widget: textedit
+widget: textarea
 prompt: |
 
         ### Xen問題 No.3

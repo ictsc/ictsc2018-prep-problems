@@ -1,7 +1,9 @@
 「Kubernetes上のWordPressにアクセスできなくなった！」
 
+
 Kubernetes クラスタ環境を移行後、Kubernetes上のWordPressにアクセスできなくなりました。
 原因をつきとめ、修正してください。
+
 
 情報
   Kubernetesクラスタの移行手順書は存在しません。アドレスレンジに以下の変更があったことのみ分かっています。
@@ -16,6 +18,7 @@ Kubernetes クラスタ環境を移行後、Kubernetes上のWordPressにアク�
 
   Kubernetes上に展開されているDeploymentやService等のリソースは
   すべて /root/manifests/ 以下に配置されたyamlファイルから生成されたものです。
+
 
 サーバーへのアクセス情報
   踏み台サーバから以下のサーバにアクセスすることができます。

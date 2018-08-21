@@ -26,6 +26,13 @@ resource sakuracloud_note "vnc-init" {
   tags        = ["problem-${var.PROBLEM}", "${var.TEAM_LOGIN_ID}", "pstate_terraform"]
 }
 
+ resource sakuracloud_note "vnc-webrtc" {
+   name = "${var.PROBLEM}-webrtc-${var.TEAM_LOGIN_ID}"
+   class = "shell"
+   content = "${file("vnc.sh")}"
+   tags = ["problem-${var.PROBLEM}","${var.TEAM_LOGIN_ID}","pstate_terraform"]
+ }
+
 # vnc archive
 data sakuracloud_archive "vnc-archive" {
   name_selectors = ["VNC", "IMG", "V4"]
@@ -41,7 +48,7 @@ resource sakuracloud_switch "vnc-switch" {
 resource sakuracloud_disk "vnc-server-disk" {
   name              = "${var.PROBLEM}-vnc-server-disk-${var.TEAM_LOGIN_ID}"
   source_archive_id = "${data.sakuracloud_archive.vnc-archive.id}"
-  note_ids          = ["${sakuracloud_note.vnc-init.id}"]
+  note_ids          = ["${sakuracloud_note.vnc-init.id}","${sakuracloud_note.vnc-webrtc.id}"]
   tags              = ["problem-${var.PROBLEM}", "${var.TEAM_LOGIN_ID}", "pstate_terraform"]
 }
 

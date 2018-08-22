@@ -1,6 +1,6 @@
 type: HumanGradedTextQuestion
 id: 07_q5
-value: 10
+value: 200
 widget: textarea
 prompt: |
 

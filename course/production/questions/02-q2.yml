@@ -1,6 +1,6 @@
 type: ChoiceQuestion
 id: nasuSNMP2
-value: 10
+value: 50
 shuffle: true
 prompt: |
     

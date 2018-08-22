@@ -50,11 +50,6 @@ groups:
     -
         {{ indented_include("questions/06-q1.yml", 8) }}
 
-    -
-        {{ indented_include("questions/06-q2.yml", 8) }}
-
-    -
-        {{ indented_include("questions/06-q3.yml", 8) }}
 
 
 completion_text: |

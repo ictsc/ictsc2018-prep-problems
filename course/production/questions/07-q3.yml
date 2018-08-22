@@ -1,6 +1,6 @@
 type: ChoiceQuestion
 id: 07_q3
-value: 10
+value: 100
 shuffle: true
 prompt: |
 

@@ -1,6 +1,6 @@
 type: MultipleChoiceQuestion
 id: 01_q2
-value: 10
+value: 70
 shuffle: false
 credit_mode: exact
 prompt: |

@@ -1,13 +1,13 @@
 type: ChoiceQuestion
 id: 03_q3
-value: 10
+value: 50
 shuffle: false
 prompt: |
 
     ### IPv6問題 No.3 IPv6豆知識
 
-    以下のIPv6に関する文章の中からもっとも正しいものを選べ
-
+    以下のIPv6に関する文章の中からもっとも正しいものを選んでください。 <br/>
+    <br/><br/>
 choices:
 
     - IPv6ではアドレス解決にARPv6を使う

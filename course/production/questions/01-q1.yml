@@ -1,18 +1,18 @@
 type: ChoiceQuestion
 id: 01_q1
-value: 10
+value: 25
 shuffle: false
 prompt: |
 
         ### Docker問題 No.1
-
-        以下のDockerコンテナに関する説明のうち、正しいものを選択せよ。<br/>
         <br/>
-        a. Dockerコンテナ内で動かすことができるプロセス数の上限は1である。
-        b. Dockerコンテナ内部のUIDを0以外に指定できる。
-        c. Dockerコンテナではデフォルトでinit(systemdなど)が実行される。
-        d. "scratch"と呼ばれるイメージを使うと、ホストのOSと同じOSが入ったDockerコンテナを起動できる。
-
+        以下のDockerコンテナに関する説明のうち、正しいものを選択してください。<br/>
+        <br/>
+        a. Dockerコンテナ内で動かすことができるプロセス数の上限は1である<br/>
+        b. Dockerコンテナ内部のUIDを0以外に指定できる<br/>
+        c. Dockerコンテナではデフォルトでinit(systemdなど)が実行される<br/>
+        d. "scratch"と呼ばれるイメージを使うと、ホストのOSと同じOSが入ったDockerコンテナを起動できる<br/>
+        <br/><br/>
 choices:
 
     - a

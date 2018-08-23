@@ -1,0 +1,44 @@
+「BGP」
+
+Router1とRouter2は最近、EBGPピアを張ることを決定しました。Router1に設定を行い、Router2とEBGPピアを張ってください。EBGPピアを張ることができたかどうかは、「show ip bgp summary」で確認できます。
+なお、以下の注意事項に沿って設定してください。
+・　設定できるルータはRouter1のみです。
+・　Router1のAS番号は「1」で設定してください。
+・　Router1のebgp neighborを張る宛先はRouter2のLoopbackを指定してください。
+
+
+情報
+  トポロジー図は以下のURLから参照できます。
+  https://drive.google.com/open?id=1vJuvTFwltzFRNU8fxkZLj-wEyDosyTat
+
+  「sh ip bgp summary」の結果の一番下の行の右端が「0」になっていれば、ピアを張ることができています。
+
+  実行例を以下に記載します。この結果では下の行の右端が「0」になっています。
+  ```
+  Neighbor        V    AS MsgRcvd MsgSent   TblVer  InQ OutQ Up/Down  State/PfxRcd
+  2.2.2.2         4    2       6       8        1    0    0 00:03:39        0
+  ```
+
+
+サーバーへのアクセス情報
+  踏み台サーバから以下のサーバにアクセスすることができます。
+
+  1. Router1
+    Address: 192.168.0.1
+    User：admin
+    Password：GMyfVD6cF
+    Enable password：HuWjzLZoP
+
+
+
+
+ゴール
+  Router1・Router2間でEBGPピアを張る
+
+
+完了した際には、文章問題(relate)のサービスで完了報告をお願いします。
+内容は基本自由ですが、記録(どのようなコマンドで作業を行ったか等)を必ず記入してください。
+
+
+質問がある場合は配布資料でお伝えしている通り
+yosen@icttoracon.net宛に質問のメールを送信してください。

@@ -27,10 +27,6 @@ Firefoxで動作しない。
 
 ルーター・サーバーへのアクセス情報
   踏み台サーバから以下のルーターにアクセスすることができます。
-  1. Router-B
-  Address：admin
-  User：192.168.0.200
-  Password：4erqz8tu
   1. WebRTC Server
     Address: 192.168.0.100
     User: admin

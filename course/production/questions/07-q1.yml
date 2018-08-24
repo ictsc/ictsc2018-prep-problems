@@ -10,7 +10,7 @@ prompt: |
     このサーバーではnginxが0.0.0.0:80で通信待ち受けしています。このnginxを用いて<br/>
     localhost:8080で動いているサービスにproxyするようにしたいのですが、何故か正常に動作しません。<br/>
     原因を特定し、正常に動作するために必要な手順を説明してください。<br/>
-    なお、nginxは適切に設定がなされているものとします。<br/>
+    なお、nginxは適切に設定がなされているものとし、iptablesのポリシーを変更してはいけません。<br/>
     <br/>
     ```
     root@ubuntu:/etc/nginx/sites-enabled# systemctl status nginx

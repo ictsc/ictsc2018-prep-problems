@@ -126,21 +126,21 @@ chunks:
         | 問題ID | 問題技術       | 問題名                                                                                           | 満点 |
         | :-:    | :-:            | :--                                                                                              | --:  |
         | 1      | Docker         | [Docker 筆記](flow:ictsc2018-pre1-01)                                                            | 165  |
-        | 2      | Docker         | [Docker 実技1 VyOSにpingが通らない!](flow:ictsc2018-pre1-01-pstate-01)                           | 250  |
-        | 3      | Docker         | [Docker 実技2 Kubernetes上のWordPressにアクセスできなくなった](flow:ictsc2018-pre1-01-pstate-02) | 400  |
+        | 2      | Docker         | [Docker 実技1](flow:ictsc2018-pre1-01-pstate-01)                           | 250  |
+        | 3      | Docker         | [Docker 実技2](flow:ictsc2018-pre1-01-pstate-02) | 400  |
         | 4      | SNMP           | [SNMP 筆記](flow:ictsc2018-pre1-02)                                                              | 75   |
-        | 5      | SNMP           | [SNMP 実技 SNMPで監視ができない](flow:ictsc2018-pre1-02-pstate-01)                               | 200  |
+        | 5      | SNMP           | [SNMP 実技](flow:ictsc2018-pre1-02-pstate-01)                               | 200  |
         | 6      | IPv6           | [IPv6 筆記](flow:ictsc2018-pre1-03)                                                              | 125  |
-        | 7      | IPv6           | [IPv6 実技 IPv6](flow:ictsc2018-pre1-03-pstate-01)                                               | 350  |
-        | 8      | Network Create | [Network 実技 Tunnel](flow:ictsc2018-pre1-04-pstate-01)                                          | 200  |
-        | 9      | Network Create | [Network 実技 BGP](flow:ictsc2018-pre1-04-pstate-02)                                             | 250  |
-        | 10     | Network Create | [Network 実技 NAT](flow:ictsc2018-pre1-04-pstate-03)                                             | 100  |
+        | 7      | IPv6           | [IPv6 実技](flow:ictsc2018-pre1-03-pstate-01)                                               | 350  |
+        | 8      | Network Create | [Network 実技1](flow:ictsc2018-pre1-04-pstate-01)                                          | 200  |
+        | 9      | Network Create | [Network 実技2](flow:ictsc2018-pre1-04-pstate-02)                                             | 250  |
+        | 10     | Network Create | [Network 実技3](flow:ictsc2018-pre1-04-pstate-03)                                             | 100  |
         | 11     | Xen            | [Xen 筆記](flow:ictsc2018-pre1-05)                                                               | 325  |
         | 12     | Load Balancer  | [Load Balancer 筆記](flow:ictsc2018-pre1-06)                                                     | 100  |
-        | 13     | Load Balancer  | [Load Balancer 実技 ワンコインステータス？](flow:ictsc2018-pre1-06-pstate-01)                    | 100  |
+        | 13     | Load Balancer  | [Load Balancer 実技](flow:ictsc2018-pre1-06-pstate-01)                    | 100  |
         | 14     | Packet Filter  | [Packet Filter 筆記](flow:ictsc2018-pre1-07)                                                     | 600  |
-        | 15     | Packet Filter  | [Packet Filter 実技 Packet Filtering](flow:ictsc2018-pre1-07-pstate-01)                          | 300  |
-        | 16     | WebRTC         | [WebRTC 実技 WebRTC](flow:ictsc2018-pre1-08-pstate-01)                                           | 500  |
+        | 15     | Packet Filter  | [Packet Filter 実技](flow:ictsc2018-pre1-07-pstate-01)                          | 300  |
+        | 16     | WebRTC         | [WebRTC 実技](flow:ictsc2018-pre1-08-pstate-01)                                           | 500  |
 
         <br />
 

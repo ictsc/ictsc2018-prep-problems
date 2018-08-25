@@ -1,53 +1,43 @@
 「NAT」
 
-
 以下のURLからトポロジー図をダウンロードできます。
-https://drive.google.com/open?id=1RV-dpFPXhCa9NVbtFx5AfpZf7KibJFFq
 
+https://drive.google.com/open?id=1RV-dpFPXhCa9NVbtFx5AfpZf7KibJFFq
 上記のトポロジー図の通りに配線してある機材に設定を投入しましたが、Router-Bから対外への疎通が取れません。
 そのため、Router-Bから対外疎通がとれるようにしたいと考えています。
 Router-AにGigabitEthernet1側が外部ネットワーク、
 GigabitEthernet2側が内部ネットワークとなるようにNATの設定を書き加え、
 Router-Bからインターネット（例えばIPアドレス8.8.8.8）へpingを飛ばせるようにしてください。
+pingを飛ばす際、経路はRouter-Aを経由します。
 Router-AでIPアドレスの設定変更をする必要はありません。
-
-
 解答メールを送る際は、
 ・参加者が設定したコンフィグ
 ・Router-Bからのpingコマンド実行結果
 を添えて下さい。
-
-
 ルーター・サーバーへのアクセス情報
-  踏み台サーバから以下のルーターにアクセスすることができます。
-  1. Router-B
-  Address：admin
-  User：192.168.0.200
-  Password：4erqz8tu
+踏み台サーバから以下のルーターにアクセスすることができます。
 
-  以下のルーターは踏み台VNCサーバーから直接アクセスすることができません。
-  2. Router-A
-  Address：10.0.0.200 (1. Router-B からSSH接続することができます）
-  User：nat
-  Password：uBXKR7bK
-  Enable password：nat
+1. Router-B
+   Address：admin
+   User：192.168.0.200
+   Password：4erqz8tu
+   以下のルーターは踏み台VNCサーバーから直接アクセスすることができません。
 
+2. Router-A
+   Address：10.0.0.200 (1. Router-B からSSH接続することができます）
+   User：nat
+   Password：uBXKR7bK
+   Enable password：nat
 
 ゴール
-  Router-AにNATの設定を書き加え、Router-Bからインターネットにpingを飛ばせるようにする
-
+Router-AにNATの設定を書き加え、Router-Bからインターネットにpingを飛ばせるようにする
 
 完了した際には、文章問題(relate)のサービスで完了報告をお願いします。
 内容は基本自由ですが、記録(どのようなコマンドで作業を行ったか等)を必ず記入してください。
+
 また、この問題では追加で
-  ・参加者が設定したコンフィグ
-  ・Router-Bからのpingコマンド実行結果
+・参加者が設定したコンフィグ
+・Router-Bからのpingコマンド実行結果
 を添えて下さい。
-
-
 質問がある場合は配布資料でお伝えしている通り
 yosen@icttoracon.net宛に質問のメールを送信してください。
-
-復旧措置
-ペナルティーによる減点はありません。
-質問としてメールしてください。

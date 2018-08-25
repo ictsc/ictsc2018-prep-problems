@@ -13,7 +13,7 @@ ZabbixからSNMPを用いてVyOSを監視したいと思い設定を行いまし
     Address: 192.168.0.5
     User: admin
     Password: fG9bycDJ
-    ZabbixのURL: https://192.168.0.5:8080
+    ZabbixのURL: http://192.168.0.5:8080
     ZabbixのログインID: admin
     Zabbixのパスワード: zabbix
   2. vyos
@@ -50,7 +50,7 @@ GrafanaというOSSをdocker-composeで構築・可視化をしていました�
     Address: 192.168.0.5
     User: admin
     Password: fG9bycDJ
-    ZabbixのURL: https://192.168.0.5:8080
+    ZabbixのURL: http://192.168.0.5:8080
     ZabbixのログインID: admin
     Zabbixのパスワード: zabbix
   2. VyOS

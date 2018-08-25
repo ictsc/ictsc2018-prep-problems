@@ -32,7 +32,7 @@ Firefoxで動作しない。
     User: admin
     Password: vcFkyv3u
     WebRTCのExpress Serverは systemd にて管理
-    systemctl start ictsc-cchat で起動
+    systemctl start ictsc-chat で起動
 
 
 ゴール

@@ -50,5 +50,5 @@ Kubernetes クラスタ環境を移行後、Kubernetes上のWordPressにアク�
 yosen@icttoracon.net宛に質問のメールを送信してください。
 
 復旧措置
-ペナルティーによる原点はありません。
+ペナルティーによる減点はありません。
 質問としてメールしてください。

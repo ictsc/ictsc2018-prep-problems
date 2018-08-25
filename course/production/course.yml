@@ -144,6 +144,13 @@ chunks:
 
         <br />
 
+        ## Q&A
+
+        * Q: 送信履歴が付きませんが送信されていますか?
+          * A: ユーザには履歴が見えない仕様になっています。
+        * Q: Save answer and finish を押したあとに緑色のボタン(submit)を押す必要はありますか?
+          * A: submitを押す必要はありません。Save answer and finishを押した時点で提出されています。
+
         ## 問題修正
         <br />
 

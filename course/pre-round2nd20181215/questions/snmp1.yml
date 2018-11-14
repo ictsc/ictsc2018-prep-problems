@@ -1,7 +1,7 @@
 type: ChoiceQuestion
 id: snmp1
 value: 25
-shuffle: true
+shuffle: false
 prompt: |
     
     ### SNMP問題 No.1 SNMPの基礎知識

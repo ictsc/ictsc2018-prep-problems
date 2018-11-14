@@ -1,0 +1,23 @@
+type: ChoiceQuestion
+id: snmp1
+value: 25
+shuffle: true
+prompt: |
+    
+    ### SNMP問題 No.1 SNMPの基礎知識
+    次の表について適切な組み合わせの選択肢はどれでしょうか。<br/>
+    <br/>
+    <br/>
+choices:
+
+  - (a)
+  - (b)
+  - (c)
+  - ~CORRECT~ (d)
+  - (e)
+  - (f)
+  - (g)
+ 
+answer_explanation:
+
+   (d)<br/>

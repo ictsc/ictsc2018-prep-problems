@@ -1,0 +1,53 @@
+{% from "yaml-macros.yml" import indented_include %}
+
+title: "ICTSC2018 二次予選 SNMP"
+
+# The "|" character introduces a 'block literal', which means all text indented below
+# it is taken literally. The description property holds text marked up with 'Markdown'.
+# See https://documen.tician.de/relate/content.html#relate-markup for more.
+#
+# So the '#' character below introduces a first-level headline (not a comment).
+description: |
+    # ICTSC2018 二次予選 SNMP
+rules:
+    start:
+    -
+        if_before: end_week 1
+        if_has_role: [student, ta, instructor]
+        if_has_in_progress_session: False
+        may_start_new_session: True
+        may_list_existing_sessions: True
+    -
+        if_has_in_progress_session: True
+        may_start_new_session: True
+        may_list_existing_sessions: False
+
+    access:
+    -
+        message: "ICTSC2018 二次予選　SNMP"
+        permissions: [view, submit_answer]
+
+    grade_identifier: ictsc2018_prep01_prob02_relate
+    grade_aggregation_strategy: use_latest
+
+    grading:
+    -
+        credit_percent: 100
+
+groups:
+-
+    id: quiz_start
+    shuffle: false
+    pages:
+
+    # Pages can be given in-line (like this one) or brought in by including
+    # them from other files, as below
+
+    -
+        {{ indented_include("questions/snmp1.yml", 8) }}
+
+
+completion_text: |
+    ### お疲れ様でした!
+    他のコースも忘れずに解答をお願いします。
+    

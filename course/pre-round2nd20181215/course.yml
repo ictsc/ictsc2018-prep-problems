@@ -98,7 +98,7 @@ chunks:
         | 1      | Docker         | [Docker 筆記](flow:ictsc2018-pre1-01)                                                            | 165  |
         | 2      | Docker         | [Docker 実技1](flow:ictsc2018-pre1-01-pstate-01)                           | 250  |
         | 3      | Docker         | [Docker 実技2](flow:ictsc2018-pre1-01-pstate-02) | 400  |
-        | 4      | SNMP           | [SNMP 筆記](flow:ictsc2018-pre1-02)                                                              | 75   |
+        | 4      | SNMP           | [SNMP 筆記](flow:ictsc2018-pre2-snmp)                                                              | 75   |
         | 5      | SNMP           | [SNMP 実技](flow:ictsc2018-pre1-02-pstate-01)                               | 200  |
         | 6      | IPv6           | [IPv6 筆記](flow:ictsc2018-pre1-03)                                                              | 125  |
         | 7      | IPv6           | [IPv6 実技](flow:ictsc2018-pre1-03-pstate-01)                                               | 350  |

@@ -115,13 +115,13 @@ chunks:
         ## 問題一覧
         <br />
         
-        | 問題ID | 問題名       | 満点 |
-        | :-:   | :--         | --:  |
-        |  1 | Infrastructure | xxx |
-        |  2 | Network        | xxx |
-        |  3 | Packet Filter  | xxx |
-        |  4 | SNMP           | xxx |
-        |  5 | Linux          | xxx |
+        | Problem ID | Problem name                              | Full mark |
+        | :-:        | :--                                       | --:       |
+        | 1          | Infrastructure(flow:ictsc2018-pre2-infra) | xxx       |
+        | 2          | Network                                   | xxx       |
+        | 3          | Packet Filter                             | xxx       |
+        | 4          | SNMP(flow:ictsc2018-pre2-snmp)            | xxx       |
+        | 5          | Linux                                     | xxx       |
         <br />
         
         ## Q&A

@@ -1,0 +1,26 @@
+type: ChoiceQuestion
+id: 02_q12
+value: 25
+shuffle: false
+prompt: |
+
+        ### インフラ問題 No.12
+
+        スペクトラムアナライザでとある周波数を測定したとき、0dBmと表示された。この時、受信電力はいくつか。(単位：W=ワット) 
+
+choices:
+  - 0mW
+  - ~CORRECT~1mW
+  - -1mW
+  - 10mW
+
+
+answer_explanation: |
+    スペクトラムアナライザでとある周波数を測定したとき、0dBmと表示された。この時、受信電力はいくつか。(単位：W=ワット) 
+    
+    - 0mW
+    - 1mW
+    - -1mW
+    - 10mW
+  
+    解説は今度

@@ -1,0 +1,26 @@
+type: ChoiceQuestion
+id: 02_q18
+value: 25
+shuffle: false
+prompt: |
+
+        ### インフラ問題 No.18
+
+        VPNについて述べた次の文章のうち、誤っているものはどれか
+
+choices:
+  - VPWS(Virtual Private Wire Service)は、MPLSの基本接続単位であるポイントツーポイント接続によるVPN接続法で、加入者から見るとMPLSネットワークを仮想回線とみなすことができる。
+  - VPLS(Virtual Private LAN Service)は、３つ以上の加入者ネットワークのサイトをフルメッシュで繋ぐVPN接続法で、複数のLSP(Label Switched Path)を組み合わせることで実現している。
+  - ~CORRECT~MPLSの概念を光ネットワークやSDH/SONETなどに応用したMPLS-TPでは、光信号の波長を基にルーティングを決定するとともに、制御専用のIPチャネルを用意することにより実データを光信号のままルーティングすることができる。
+  - PBB(Provide Backbone Bridge)は、広域イーサネットの拡張技術であり、広域イーサネットサービス利用者の収容容量の増と負荷低減を同時に実現できる。
+
+
+answer_explanation: |
+   VPNについて述べた次の文章のうち、誤っているものはどれか
+    
+    - VPWS(Virtual Private Wire Service)は、MPLSの基本接続単位であるポイントツーポイント接続によるVPN接続法で、加入者から見るとMPLSネットワークを仮想回線とみなすことができる。
+    - VPLS(Virtual Private LAN Service)は、３つ以上の加入者ネットワークのサイトをフルメッシュで繋ぐVPN接続法で、複数のLSP(Label Switched Path)を組み合わせることで実現している。
+    - MPLSの概念を光ネットワークやSDH/SONETなどに応用したMPLS-TPでは、光信号の波長を基にルーティングを決定するとともに、制御専用のIPチャネルを用意することにより実データを光信号のままルーティングすることができる。
+    - PBB(Provide Backbone Bridge)は、広域イーサネットの拡張技術であり、広域イーサネットサービス利用者の収容容量の増と負荷低減を同時に実現できる。
+  
+    解説は今度

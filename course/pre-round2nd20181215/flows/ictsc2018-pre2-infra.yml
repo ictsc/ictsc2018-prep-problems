@@ -1,0 +1,90 @@
+{% from "yaml-macros.yml" import indented_include %}
+
+title: "ICTSC2018 2次予選 Infrastructure"
+
+# The "|" character introduces a 'block literal', which means all text indented below
+# it is taken literally. The description property holds text marked up with 'Markdown'.
+# See https://documen.tician.de/relate/content.html#relate-markup for more.
+#
+# So the '#' character below introduces a first-level headline (not a comment).
+description: |
+    # ICTSC2018 2次予選 Infrastructure
+rules:
+    start:
+    -
+        if_before: end_week 1
+        if_has_role: [student, ta, instructor]
+        if_has_in_progress_session: False
+        may_start_new_session: True
+        may_list_existing_sessions: True
+    -
+        if_has_in_progress_session: True
+        may_start_new_session: True
+        may_list_existing_sessions: False
+
+    access:
+    -
+        message: "ICTSC2018 2次予選 Infrastructure"
+        permissions: [view, submit_answer]
+
+    grade_identifier: ictsc2018_prep02_prob02_relate
+    grade_aggregation_strategy: use_latest
+
+    grading:
+    -
+        credit_percent: 100
+
+groups:
+-
+    id: quiz_start
+    shuffle: false
+    pages:
+
+    # Pages can be given in-line (like this one) or brought in by including
+    # them from other files, as below
+
+    -
+        {{ indented_include("questions/pre2-infra01.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra02.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra03.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra04.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra05.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra06.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra07.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra08.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra09.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra10.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra11.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra12.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra13.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra14.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra15.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra16.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra17.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra18.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra19.yml", 8) }}
+    -
+        {{ indented_include("questions/pre2-infra20.yml", 8) }}
+
+
+completion_text: |
+    ### お疲れ様でした!
+    他のコースも忘れずに解答をお願いします。

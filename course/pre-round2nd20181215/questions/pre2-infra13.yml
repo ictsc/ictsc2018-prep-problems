@@ -1,0 +1,26 @@
+type: ChoiceQuestion
+id: 02_q13
+value: 25
+shuffle: false
+prompt: |
+
+        ### インフラ問題 No.13
+
+        電子レンジによって最も妨害を受ける周波数帯は、次のうちどれか
+
+choices:
+  - 920MHz帯
+  - ~CORRECT~2.4GHz帯
+  - 5.6GHz帯
+  - 1.2GHz帯
+
+
+answer_explanation: |
+    電子レンジによって最も妨害を受ける周波数帯は、次のうちどれか
+    
+    - 920MHz帯
+    - 2.4GHz帯
+    - 5.6GHz帯
+    - 1.2GHz帯
+  
+    解説は今度

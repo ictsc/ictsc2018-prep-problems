@@ -1,0 +1,23 @@
+type: ChoiceQuestion
+id: snmp02
+value: 25
+shuffle: false
+prompt: |
+
+    ### SNMP問題 No.2 OIDに関する知識
+    次のOIDを指定した場合の動作内容について最も正しい選択肢を答えてください。<br/>
+    <br/>
+    OID:  .1.3.6.1.4.1.9.9.109.1.1.1.1.8
+    <br/>
+    <br/>
+choices:
+
+  - (a) Juniper社製品の再起動が可能
+  - (b) 全てのルータ製品の直近1分間のCPU利用率が取得可能
+  - (c) 全てのL2スイッチ製品の直近5分間のCPU利用率が取得可能
+  - (d) Apple社製品の直近1分間のCPU利用率が取得可能
+  - ~CORRECT~ (e) Cisco社製品の直近5分間のCPU利用率が取得可能
+  - (f) NEC社製品のバージョン情報が取得可能
+
+answer_explanation:
+(e)<br/>

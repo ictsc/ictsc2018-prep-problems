@@ -1,0 +1,22 @@
+type: MultipleChoiceQuestion
+id: snmp03
+value: 50
+shuffle: false
+prompt: |
+
+    ### SNMP問題 No.3 SNMPとSYSLOGとの違いに関する知識
+    NW上の機器状態を把握する方法としてSNMPとSYSLOGを比較した場合について正しい説明の選択肢を答えてください（複数回答可）
+    <br/>
+    <br/>
+    <br/>
+choices:
+
+  - (a) SNMPとSYSLOGのどちらも管理対象機器の設定変更まで実施することが可能である
+  - (b) 標準機能でRSAなどの暗号化技術に対応したバージョンが存在するSNMPの方がセキュリティが高い
+  - ~CORRECT~ (C) SYSLOGでは指定した優先度以上のメッセージのみ送信するように設定することが可能である
+  - (d) 回線エラー発生数やCPU状態などの性能監視をしたい場合にはSYSLOGが適している
+  - (e) SNMPの各バージョンは混在して設定することが出来ない
+  - (f) 上記の選択肢の中に正しい説明はない
+
+answer_explanation:
+ (c)<br/>

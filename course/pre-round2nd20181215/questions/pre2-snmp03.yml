@@ -5,6 +5,7 @@ shuffle: false
 prompt: |
 
     ### SNMP問題 No.3 SNMPとSYSLOGとの違いに関する知識
+    <br/>
     NW上の機器状態を把握する方法としてSNMPとSYSLOGを比較した場合について正しい説明の選択肢を答えてください（複数回答可）
     <br/>
     <br/>

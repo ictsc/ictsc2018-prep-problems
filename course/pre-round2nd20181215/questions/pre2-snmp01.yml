@@ -7,9 +7,7 @@ prompt: |
     ### SNMP問題 No.1 SNMPの基礎知識
     <br/>
     次の表について適切な組み合わせの選択肢はどれでしょうか。<br/>
-    <br/>
-            <img src="repo:images/pre2-snmp01.png">      
-    <br/>
+    <img src="repo:images/pre2-snmp01.png">      
 choices:
 
   - (a)

@@ -1,1 +1,4 @@
-test
+unenrolled:
+- "*.png"
+- "*.jpeg"
+- "*.jpg"

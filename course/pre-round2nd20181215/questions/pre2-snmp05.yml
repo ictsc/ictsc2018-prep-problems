@@ -12,7 +12,7 @@ prompt: |
         VNCサーバへの接続情報はpstateを参照してください。
         <br>
         <br>
-        ・SNMP MangerのSSH用 ID/パスワード： admin / KQ4iximz
+        ・SNMP ManagerのSSH用 ID/パスワード： admin / KQ4iximz
         
         ・ヒント1：SNMPv2cが稼働中 「コミュニティ名：ictsc2018-pre2」
         

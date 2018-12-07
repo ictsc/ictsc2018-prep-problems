@@ -6,11 +6,12 @@ prompt: |
         ### SNMP問題 No.4(実技) Agentにログイン出来ないけど問題解決！
         <br>
         SNMP Agentのeth1のIPアドレスとサブネットマスクを回答してください。ただし、SNMP Agentにはログイン出来ません。
+        <img src="repo:images/pre2-snmp0405.png">    
         <br>
         <br>
         ・ヒント：SNMPv2cが稼働中 「コミュニティ名：ictsc2018-pre2」
         
-        ・【回答のフォーマット(右記の例を参照)】　192.168.0.254/24 
+        ・【回答のフォーマット(右記を参照)】　192.168.0.254/24 
 rubric: |
         Answer
         

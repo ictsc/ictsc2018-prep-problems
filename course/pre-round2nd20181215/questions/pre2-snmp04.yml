@@ -1,9 +1,9 @@
 type: HumanGradedTextQuestion
-id: 03_pstate_q1
+id: 05-snmp04
 value: 10
 widget: textarea
 prompt: |
-        ### IPv6問題 実技
+        ### SNMP問題 実技
         実技問題の「IPv6」の解答を書いてください
 rubric: |
         Answer

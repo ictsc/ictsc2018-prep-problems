@@ -7,6 +7,8 @@ prompt: |
         <br>
         SNMP Agentのeth1のIPアドレスとサブネットマスクを回答してください。ただし、SNMP Agentにはログイン出来ません。
         <br>
+        VNCサーバへの接続情報はpstateを参照してください。
+        <br>
         <br>
         ・SNMP MangerのSSH用 ID/パスワード： admin / KQ4iximz
         

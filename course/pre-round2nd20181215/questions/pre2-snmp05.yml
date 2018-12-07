@@ -5,9 +5,9 @@ widget: textarea
 prompt: |
         ### SNMP問題 No.5(実技) OID情報がおかしくなった！
         <br>
-        SNMP Agentから通知(trap)される情報を基にトラブルを解消してください。ただし、SNMP Agentにはログイン出来ません。
+        SNMP Agentから5分に1回の頻度で通知(trap)される情報を基にトラブルを解消してください。ただし、SNMP Agentにはログイン出来ません。
         <br>
-        回答にはトラブルを解消する際に投入するべきコマンド1つのみを記載してください。
+        回答にはトラブルを解消する際に投入するべき「コマンド1つのみ」を記載してください。
         <br>
         VNCサーバへの接続情報はpstateを参照してください。
         <br>
@@ -17,6 +17,8 @@ prompt: |
         ・ヒント1：SNMPv2cが稼働中 「コミュニティ名：ictsc2018-pre2」
         
         ・ヒント2：SNMP Managerで受信したtrap通知のログファイル「/var/log/snmpd/snmptrap.log」
+        
+        ・ヒント3：トラブルを解消してもAgetからのtrap通知は停止されません
         
         ・【回答のフォーマット(右記を参照)】　tcpdump -i eth0 port 80 
         <br>

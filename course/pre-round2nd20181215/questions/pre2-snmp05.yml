@@ -1,9 +1,9 @@
 type: HumanGradedTextQuestion
-id: 05_snmp04
+id: 05_snmp05
 value: 10
 widget: textarea
 prompt: |
-        ### SNMP問題 No.5(実技) 設定情報がおかしくなった！
+        ### SNMP問題 No.5(実技) OID情報がおかしくなった！
         <br>
         SNMP Agentから通知(trap)される情報を基にトラブルを解消してください。ただし、SNMP Agentにはログイン出来ません。
         回答にはトラブルを解消する際に投入するべきコマンド1つのみを記載してください。

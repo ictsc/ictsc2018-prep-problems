@@ -1,0 +1,20 @@
+type: HumanGradedTextQuestion
+id: 05_snmp04
+value: 10
+widget: textarea
+prompt: |
+        ### SNMP問題 No.5(実技) 設定情報がおかしくなった！
+        <br>
+        SNMP Agentから通知(trap)される情報を基にトラブルを解消してください。ただし、SNMP Agentにはログイン出来ません。
+        回答にはトラブルを解消する際に投入するべきコマンド1つのみを記載してください。
+        <br>
+        <br>
+        ・ヒント1：SNMPv2cが稼働中 「コミュニティ名：ictsc2018-pre2」
+        ・ヒント2：SNMP Managerで受信したtrap通知のログファイル「/var/log/snmpd/snmptrap.log」
+        
+        ・【回答のフォーマット(右記を参照)】　tcpdump -i eth0 port 80 
+        <br>
+        <img src="repo:images/pre2-snmp0405.png">    
+rubric: |
+        Answer
+        

@@ -1,5 +1,5 @@
 type: MultipleChoiceQuestion
-id: 05-snmp03
+id: 05_snmp03
 value: 50
 shuffle: false
 prompt: |

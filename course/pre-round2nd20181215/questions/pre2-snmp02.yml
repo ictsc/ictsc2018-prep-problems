@@ -1,5 +1,5 @@
 type: ChoiceQuestion
-id: snmp02
+id: 05-snmp02
 value: 25
 shuffle: false
 prompt: |

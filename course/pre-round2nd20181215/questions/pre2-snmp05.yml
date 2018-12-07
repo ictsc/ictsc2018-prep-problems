@@ -9,7 +9,7 @@ prompt: |
         回答にはトラブルを解消する際に投入するべきコマンド1つのみを記載してください。
         <br>
         <br>
-        ・SNMP Mangerのssh用パスワード：KQ4iximz
+        ・SNMP MangerのSSH用 ID/パスワード： admin / KQ4iximz
         
         ・ヒント1：SNMPv2cが稼働中 「コミュニティ名：ictsc2018-pre2」
         

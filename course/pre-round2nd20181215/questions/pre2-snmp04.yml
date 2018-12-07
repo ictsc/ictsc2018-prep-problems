@@ -1,5 +1,5 @@
 type: HumanGradedTextQuestion
-id: 05-snmp04
+id: 05_snmp04
 value: 10
 widget: textarea
 prompt: |

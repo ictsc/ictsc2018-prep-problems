@@ -18,7 +18,7 @@ prompt: |
         
         ・ヒント2：SNMP Managerで受信したtrap通知のログファイル「/var/log/snmpd/snmptrap.log」
         
-        ・ヒント3：トラブルを解消してもAgetからのtrap通知は停止されません
+        ・ヒント3：トラブルを解消してもAgentからのtrap通知は停止されません
         
         ・【回答のフォーマット(右記を参照)】　tcpdump -i eth0 port 80 
         <br>

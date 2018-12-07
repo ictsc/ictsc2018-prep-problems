@@ -8,6 +8,8 @@ prompt: |
         SNMP Agentから通知(trap)される情報を基にトラブルを解消してください。ただし、SNMP Agentにはログイン出来ません。
         回答にはトラブルを解消する際に投入するべきコマンド1つのみを記載してください。
         <br>
+        VNCサーバへの接続情報はpstateを参照してください。
+        <br>
         <br>
         ・SNMP MangerのSSH用 ID/パスワード： admin / KQ4iximz
         

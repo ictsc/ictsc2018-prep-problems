@@ -8,6 +8,8 @@ prompt: |
         SNMP Agentのeth1のIPアドレスとサブネットマスクを回答してください。ただし、SNMP Agentにはログイン出来ません。
         <br>
         <br>
+        ・SNMP Mangerのssh用パスワード：KQ4iximz
+        
         ・ヒント：SNMPv2cが稼働中 「コミュニティ名：ictsc2018-pre2」
         
         ・【回答のフォーマット(右記を参照)】　192.168.0.254/24 

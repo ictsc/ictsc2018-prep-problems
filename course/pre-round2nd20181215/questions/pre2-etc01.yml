@@ -1,0 +1,22 @@
+type: ChoiceQuestion
+id: 03_q1
+value: 25
+shuffle: false
+prompt: |
+
+        ### NWと光 No.1
+        VLANに関する記載のうち、正しいものを選べ
+
+choices:
+  - ~CORRECT~VLANが異なるノードは同一のL2ブロードキャストドメインに所属していない
+  - VLANはIPパケットにVLANIDが付与され、ルータにおいて同一のVLANIDを持つネットワークに対してフレームが転送される。
+  - 802.1qではセキュリティ上の問題から、Taggedに設定されているポートではすべてのフレームにVLANidを必須であり、VLANタグのついていない受信フレームはすべて破棄しなければならない
+  - 802.1qでは10bitのVLAN識別子に代わって、4byte VLANを用いる。これには「<AS番号>.<16bitの識別子」というvlandotという表記が標準的に用いられている。
+
+answer_explanation: |
+    VLANはコリジョンドメインを分ける機能であるため選択肢が回答となる。
+    
+    他の選択肢については以下の通り。
+    VLANはEtherフレームに付与されるタグのVLANIDによって、スイッチにて適切に転送される。
+    Taggedポートであっても、UntagedのフレームはNative VLANの設定があればスイッチは処理することできる。
+    VLANは802.1qで定義されるプロトコルであり、10bitで表現されるIDをもつ。

@@ -1,0 +1,26 @@
+type: ChoiceQuestion
+id: 03_q3
+value: 25
+shuffle: false
+prompt: |
+
+        ### NWと光 No.3
+        Ciscoルータでは、BGPセッションの保護のため、以下のような設定をすることができる]
+        ```
+        R1(config)# router bgp 64496
+        R1(config-router)#neighbor 198.51.100.1 remote-as 64497
+        R1(config-router)#neighbor 198.51.100.1 password ICTSC
+        ```
+        このとき、ルータ間のパケットはどのように保護されるか正しいものを選べ。
+
+
+choices:
+  - 両ルータ間で動的なIPSecトンネルがに確立され、メッセージの内容が保護される
+  - BGPセッションの確立時にチャレンジアンドレスポンスでの認証が行われ、不正なセッションの確立を防ぐ
+  - ~CORRECT~BGPメッセージに対するMD5署名を行い、不正なメッセージからセッションを保護する
+  - BGPセッションの確立時にHTTPSが確立され、メッセージの内容が保護される。
+  
+answer_explanation: |
+    RFC 2385のMD5 Digestを用いたセッション保護に関する問題。neighbor x.x.x.x passwordコマンドはこの標準に従い、BGPルータ間のセッションを署名し、第三者がTCPセッションを乗っ取ったり、なりすます脅威を低減させる。
+    
+    他の選択肢のように通信路事態は暗号化されず、あるいは、確立時のみに認証を行う機能ではない。

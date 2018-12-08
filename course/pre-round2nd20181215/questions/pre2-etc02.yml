@@ -1,0 +1,19 @@
+type: ChoiceQuestion
+id: 03_q2
+value: 25
+shuffle: false
+prompt: |
+
+        ### NWと光 No.2
+        以下の文章のうち【誤って】いるものを選べ
+
+choices:
+  - OSPFにおいてhello intervalの異なるルータ間ではpeerが確立できない
+  - OSPFにおいてdead intervalの異なるルータ間ではpeerが確立できない
+  - OSPFにおいてMTUが異なって設定されているルータ間ではpeerが確立できない
+  - ~CORRECT~BGPにおいてholddown timerが異なるルータ間ではpeerが確立できない
+  
+answer_explanation: |
+    BGPにおいて、holddown timerは値が短い方が用いられて、Peerは確立できる。
+    
+    OSPFにおいて、選択肢に上げたtimerやMTUは一致しないければならない。

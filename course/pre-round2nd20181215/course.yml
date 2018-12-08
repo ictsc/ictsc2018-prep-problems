@@ -81,7 +81,7 @@ chunks:
         
         ```
         【宛先】yosen@icttoracon.net
-        【件名】[ICTSC2018][予選1][team○○][問○○] 問題タイトル
+        【件名】[ICTSC2018][予選2][team○○][問○○] 問題タイトル
                 ※ 特定の問題に属さない場合は「[ICTSC2018][予選1][team○○][共通] 共通」
         【本文】質問内容を記載
         ```
@@ -90,9 +90,9 @@ chunks:
         ##### 件名例
         <br />
         
-        * `[ICTSC2018][予選1][team01][問01] PCが1台壊れた!`
-        * `[ICTSC2018][予選1][team99][問99] PCが99台壊れた!`
-        * `[ICTSC2018][予選1][team01][共通] 共通`
+        * `[ICTSC2018][予選2][team01][問01] PCが1台壊れた!`
+        * `[ICTSC2018][予選2][team99][問99] PCが99台壊れた!`
+        * `[ICTSC2018][予選2][team01][共通] 共通`
         <br />
         
         #### 注意事項
@@ -115,13 +115,14 @@ chunks:
         ## 問題一覧
         <br />
         
-        | Problem ID | Problem name                                | Full mark |
-        | :-:        | :--                                         | --:       |
-        | 1          | [Infrastructure](flow:ictsc2018-pre2-infra) | xxx       |
-        | 2          | Network                                     | xxx       |
-        | 3          | Packet Filter                               | xxx       |
-        | 4          | [SNMP](flow:ictsc2018-pre2-snmp)            | xxx       |
-        | 5          | Linux                                       | xxx       |
+        | Problem ID | Problem name                                   | Full mark |
+        | :-:        | :--                                            | --:       |
+        | 1          | [Infrastructure](flow:ictsc2018-pre2-infra)    | xxx       |
+        | 2          | [Cost](flow:ictsc2018-pre2-cost-calc)          | xxx       |
+        | 3          | Network                                        | xxx       |
+        | 4          | Packet Filter                                  | xxx       |
+        | 5          | [SNMP](flow:ictsc2018-pre2-snmp)               | xxx       |
+        | 7          | Linux                                          | xxx       |
         <br />
         
         ## Q&A

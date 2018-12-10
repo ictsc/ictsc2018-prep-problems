@@ -4,7 +4,12 @@ id: 06_routing
 value: 300
 widget: textarea
 prompt: |
-        ### routing問題 実技（問題環境の情報はpstateにて取得してください）
+        ### routing問題 実技
+        <br>
+        <br>
+        ### 問題環境の情報はpstateにて取得してください
+        <br>
+        <br>
         <img src="repo:images/pre2-routing01.png">
         <br>
         <br>
@@ -77,9 +82,10 @@ prompt: |
         (*1) 本問題ではCSR2,CSR3に接続されているネットワークを再現するためにLoopback interfaceを使用しています。
         <br>
         <br>
-
-        
         ・解答：CSR1のshow running-config,CSR1，2，3のshow ip routeの出力
+        <br>
+        <br>
+        ### 問題環境の情報はpstateにて取得してください
         <br>
         <br>
             

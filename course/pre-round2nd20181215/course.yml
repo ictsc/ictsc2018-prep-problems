@@ -122,6 +122,7 @@ chunks:
         | 3          | Network                                        | xxx       |
         | 4          | Packet Filter                                  | xxx       |
         | 5          | [SNMP](flow:ictsc2018-pre2-snmp)               | xxx       |
+        | 6          | [routing](flow:ictsc2018-pre2-routing)         | xxx       |
         | 7          | Linux                                          | xxx       |
         <br />
         

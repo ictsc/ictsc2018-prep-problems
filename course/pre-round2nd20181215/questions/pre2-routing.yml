@@ -5,11 +5,12 @@ value: 300
 widget: textarea
 prompt: |
         ### routing問題 実技（問題環境の情報はpstateにて取得してください）
-        <img src="repo:images/pre2-snmp0405.png">
+        <img src="repo:images/pre2-routing01.png">
         <br>
         あなたは友人とともに自宅のネットワーク環境を整えています（図参照）。友人はCSR2,CSR3を設定しました。
         あなたはCSR1を操作しネットワークを完成させなければなりません。
         必要な設定は以下の3つです。
+        <br>
         <br>
         1. CSR2とOSPFネイバーを確立し、経路情報を交換する
         - area : 0
@@ -18,11 +19,13 @@ prompt: |
         - Dead インターバル : 40
         - 認証なし
         <br>
+        <br>
         2. CSR3とBGPネイバーを確立し、経路情報を交換する
         local AS : 65001
         ネイバーIP : 10.0.0.3
         remote AS : 65000
         認証なし
+        <br>
         <br>
         3. OSPFで学習した経路のうち、10.2.1.0/24のみをEBGPに再配布する
         <br>
@@ -31,24 +34,30 @@ prompt: |
         友人とは現在深い眠りについているので、話を聞くことができません。
         異なっていると思われるパラメータについて自分の設定を修正しネイバーを確立してください。
         <br>
+        <br>
         トラブルシューティングのヒント
         Cisco機器ではトラブルシューティングにdebugコマンドを使用する機会が多くあります。
         1のトラブルについて、debugコマンドを使用し状況把握に努めてください。
         SSH接続時にdebugコマンドの出力を確認するには、特権モードでterminal monitorを実行してください。
         全てのdebugの出力を止めるには no debug allを使用します。
         <br>
+        <br>
         telnet情報
         - CSR1 : admin/password
         - CSR2 : admin/password
         - CSR3 : admin/password
         <br>
+        <br>
         CSR2,CSR3についてはtelnetを行うことによって show ip route と一部のshowコマンドを実行することができます。
         <br>
+        <br>
         (*1) 本問題ではCSR2,CSR3に接続されているネットワークを再現するためにLoopback interfaceを使用しています。
+        <br>
         <br>
 
         
         ・解答：CSR1のshow running-config,CSR1，2，3のshow ip routeの出力
+        <br>
         <br>
             
 rubric: |

@@ -49,10 +49,6 @@ groups:
         {{ indented_include("questions/pre2-snmp02.yml", 8) }}
     -
         {{ indented_include("questions/pre2-snmp03.yml", 8) }}
-    -
-        {{ indented_include("questions/pre2-snmp04.yml", 8) }}
-    -
-        {{ indented_include("questions/pre2-snmp05.yml", 8) }}
 
 
 completion_text: |

@@ -2,6 +2,7 @@ type: MultipleChoiceQuestion
 id: 05_snmp03
 value: 50
 shuffle: false
+credit_mode: exact
 prompt: |
 
     ### SNMP問題 No.3 SNMPとSYSLOGとの違いに関する知識

@@ -14,7 +14,7 @@ prompt: |
     PC_C利用者「https://icttoracon.net/test/trialにつながらないぞ！」
     <br>
     <br>
-    ネットワーク構成図と担当者へのヒアリング結果を見ながら、の利用者がつながらない原因として最も考えられるものを下記から選べ。<br>
+    ネットワーク構成図と担当者へのヒアリング結果を見ながら、A〜Cそれぞれの利用者がつながらない原因として最も考えられるものを下記から選べ。<br>
     なお、名前解決は正しく行われており、かつ、コンテンツはすべてbackendサーバに配置されているものとする。<br>
     <br>
     ネットワーク構成図：
@@ -25,7 +25,7 @@ prompt: |
     <br>
     担当者ヒアリング：<br>
 
-    - 担当者A曰く「nginxのiptablesはこう設定したよ」<br>
+    - 担当者1曰く「nginxのiptablesはこう設定したよ」<br>
     ```
     iptables –A INPUT –s 192.168.1.0/255.255.255.0 –p tcp ––dport 443 –j ACCEPT
     iptables –A INPUT –s 192.168.2.0/255.255.255.0 –p tcp ––dport 80 –j ACCEPT
@@ -34,7 +34,7 @@ prompt: |
     ```
     <br>
     
-    - 担当者B曰く「nginxのconfファイルはこう設定したよ」<br>
+    - 担当者2曰く「nginxのconfファイルはこう設定したよ」<br>
     ```
     （一部抜粋）
        location ~/trial/.* {

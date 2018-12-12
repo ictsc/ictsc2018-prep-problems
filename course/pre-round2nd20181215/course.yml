@@ -123,7 +123,7 @@ chunks:
         | 4          | [Packet Filter](flow:ictsc2018-pre2-filter)    | xxx       |
         | 5          | [SNMP](flow:ictsc2018-pre2-snmp)               | xxx       |
         | 6          | [routing](flow:ictsc2018-pre2-routing)         | xxx       |
-        | 7          | [Linux](flow:ictsc2018-pre2-linux.yml)         | xxx       |
+        | 7          | [Linux](flow:ictsc2018-pre2-linux)         | xxx       |
         <br />
         
         ## Q&A

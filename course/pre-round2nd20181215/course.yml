@@ -125,7 +125,7 @@ chunks:
         | 5-2        | [SNMP](flow:ictsc2018-pre2-snmp04)             | xxx       |
         | 5-3        | [SNMP](flow:ictsc2018-pre2-snmp05)             | xxx       |
         | 6          | [routing](flow:ictsc2018-pre2-routing)         | xxx       |
-        | 7          | Linux                                          | xxx       |
+        | 7          | [Linux](flow:ictsc2018-pre2-linux)         | xxx       |
         <br />
         
         ## Q&A

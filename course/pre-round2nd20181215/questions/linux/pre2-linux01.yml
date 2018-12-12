@@ -1,0 +1,117 @@
+type: HumanGradedTextQuestion
+id: 07_q1
+value: 500
+widget: textarea
+prompt: |
+
+        ### どこからでも失礼したい
+
+        これはみんな大好きフリー素材を提供する、いやすとやの「横から失礼する人」です。<br/>
+
+        <img src="repo:images/linux/yokokara_shitsurei.png">
+
+        Aさんはこの画像を使って右側から失礼したかったのですが、元のままでは左側からしか失礼できません。<br/>
+        なんとかしたいAさんはこの画像を左右反転させることで右から失礼することに決めました。<br/>
+
+        <img src="repo:images/linux/yokokara_shitsurei_horizontal.png">
+
+        以下はC言語で書かれたAさんの左右反転するための擬似コードです。<br/>
+
+         **Aさんのコード (左右反転)** <br/>
+
+        ```flip_horizontal.c
+        #include <stdio.h>
+        #include <stdlib.h>
+
+        #define ROW_LENGTH 30000
+        #define COL_LENGTH 30000
+
+        void load_image(int **matrix) {
+            // matrixに画像を読み込むコード
+        }
+
+        int main(int argc, char *argv[]) {
+            int row, col, i;
+            int **matrix;
+
+            // メモリの確保
+            matrix = malloc(sizeof(int *) * ROW_LENGTH);
+            for (i = 0; i < ROW_LENGTH; i++) {
+                matrix[i] = malloc(sizeof(int) * COL_LENGTH);
+            }
+
+            // 横から失礼する人の画像を読み込む
+            load_image(matrix);
+
+            // 画像を左右反転
+            for (row = 0; row < ROW_LENGTH; row++) {
+                for (col = 0; col < COL_LENGTH/2; col++) {
+                        int temp = matrix[row][col];
+                        matrix[row][col] = matrix[row][COL_LENGTH - col - 1];
+                        matrix[row][COL_LENGTH - col - 1] = temp;
+                }
+            }
+        }
+        ```
+
+        ところでその傍ら、Aさんの友人のBさんはこの画像を使って下側から失礼したかったのですが、元のままでは上側からしか失礼できないことに気づき困っていました。<br/>
+        なんとかしたいBさんはこの画像を上下反転させることで下から失礼することに決めました。<br/>
+
+        <img src="repo:images/linux/yokokara_shitsurei_vertical.png">
+
+        以下はC言語で書かれたBさんの上下反転するための擬似コードです。<br/>
+
+         **Bさんのコード(上下反転)**
+
+        ```flip_vertical.c
+        #include <stdio.h>
+        #include <stdlib.h>
+
+        #define ROW_LENGTH 30000
+        #define COL_LENGTH 30000
+
+        void load_image(int **matrix) {
+            // matrixに画像を読み込むコード
+        }
+
+        int main(int argc, char *argv[]) {
+            int row, col, i;
+            int **matrix;
+
+            // メモリの確保
+            matrix = malloc(sizeof(int *) * ROW_LENGTH);
+            for (i = 0; i < ROW_LENGTH; i++) {
+                matrix[i] = malloc(sizeof(int) * COL_LENGTH);
+            }
+
+            // 横から失礼する人の画像を読み込む
+            load_image(matrix);
+
+            // 画像を上下反転
+            for (col = 0; col < COL_LENGTH; col++) {
+                for (row = 0; row < ROW_LENGTH/2; row++) {
+                        int temp = matrix[row][col];
+                        matrix[row][col] = matrix[ROW_LENGTH - row - 1][col];
+                        matrix[ROW_LENGTH - row - 1][col] = temp;
+                }
+            }
+        }
+        ```
+
+        ところでこの横から失礼する人は縦横同じサイズの正方形の画像で二人とも同じもを使用した為、左右に反転させようと上下に反転させようと計算量は変わりません。<br/>
+        にもかかわらず、AさんとBさんのコードを実行した結果以下のように反転するのにかかる時間に大きな差が出てしまいました。<br/>
+
+        - Aさんのコードを実行: 約13秒<br/>
+
+        <img src="repo:images/linux/time_of_filp_horizontal.png">
+
+        - Bさんのコードを実行: 約36秒<br/>
+
+        <img src="repo:images/linux/time_of_filp_vertical.png">
+
+        この差がなぜ出るのか困っているAさんとBさんのために、原因を記述し明らかにしてください。<br/>
+        また、Bさんはコードを速くするためにどうすればよかったのかも記述してください。<br/>
+
+
+rubric:
+    採点基準と解説は後ほど

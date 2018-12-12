@@ -8,12 +8,12 @@ prompt: |
 
         これはみんな大好きフリー素材を提供する、いやすとやの「横から失礼する人」です。<br/>
 
-        <img src="repo:images/linux/yokokara_shitsurei.png">
+        <img src="repo:images/yokokara_shitsurei.png">
 
         Aさんはこの画像を使って右側から失礼したかったのですが、元のままでは左側からしか失礼できません。<br/>
         なんとかしたいAさんはこの画像を左右反転させることで右から失礼することに決めました。<br/>
 
-        <img src="repo:images/linux/yokokara_shitsurei_horizontal.png">
+        <img src="repo:images/yokokara_shitsurei_horizontal.png">
 
         以下はC言語で書かれたAさんの左右反転するための擬似コードです。<br/>
 
@@ -57,7 +57,7 @@ prompt: |
         ところでその傍ら、Aさんの友人のBさんはこの画像を使って下側から失礼したかったのですが、元のままでは上側からしか失礼できないことに気づき困っていました。<br/>
         なんとかしたいBさんはこの画像を上下反転させることで下から失礼することに決めました。<br/>
 
-        <img src="repo:images/linux/yokokara_shitsurei_vertical.png">
+        <img src="repo:images/yokokara_shitsurei_vertical.png">
 
         以下はC言語で書かれたBさんの上下反転するための擬似コードです。<br/>
 
@@ -103,11 +103,11 @@ prompt: |
 
         - Aさんのコードを実行: 約13秒<br/>
 
-        <img src="repo:images/linux/time_of_filp_horizontal.png">
+        <img src="repo:images/time_of_filp_horizontal.png">
 
         - Bさんのコードを実行: 約36秒<br/>
 
-        <img src="repo:images/linux/time_of_filp_vertical.png">
+        <img src="repo:images/time_of_filp_vertical.png">
 
         この差がなぜ出るのか困っているAさんとBさんのために、原因を記述し明らかにしてください。<br/>
         また、Bさんはコードを速くするためにどうすればよかったのかも記述してください。<br/>

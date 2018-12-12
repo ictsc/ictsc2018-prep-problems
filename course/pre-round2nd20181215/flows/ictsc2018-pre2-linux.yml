@@ -27,7 +27,7 @@ rules:
         message: "ICTSC2018 二次予選　LINUX"
         permissions: [view, submit_answer]
 
-    grade_identifier: ictsc2018_prep01_prob02_relate
+    grade_identifier: ictsc2018_prep02_prob07_relate
     grade_aggregation_strategy: use_latest
 
     grading:

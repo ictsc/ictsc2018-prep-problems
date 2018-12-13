@@ -27,7 +27,7 @@ rules:
         message: "ICTSC2018 二次予選　SNMP"
         permissions: [view, submit_answer]
 
-    grade_identifier: ictsc2018_prep02_prob05_relate
+    grade_identifier: ictsc2018_prep02_prob05_04_05_relate
     grade_aggregation_strategy: use_latest
 
     grading:

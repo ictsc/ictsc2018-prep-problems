@@ -32,16 +32,18 @@ prompt: |
         <br>
         - 認証なし
         <br>
+        CSR2へdefault routeのアドバタイズを行う
+        <br>
         <br>
         2. CSR3とBGPネイバーを確立し、経路情報を交換する
         <br>
-        local AS : 65001
+        - local AS : 65001
         <br>
-        ネイバーIP : 10.0.0.3
+        - ネイバーIP : 10.0.0.3
         <br>
-        remote AS : 65000
+        - remote AS : 65000
         <br>
-        認証なし
+        - 認証なし
         <br>
         <br>
         3. OSPFで学習した経路のうち、10.2.1.0/24のみをEBGPに再配布する
@@ -49,11 +51,11 @@ prompt: |
         <br>
         あなたは1,2の設定作業を終えたときに、CSR2とOSPFネイバーが、CSR3とEBGPネイバーが確立できていないことに気が付きました。
         <br>
-        パラメータについて友人と認識の齟齬があった可能性があります。
+        設定ミスや、パラメータについて友人と正しく共有できていなかったがあった等、様々な可能性があります。
         <br>
         友人とは現在深い眠りについているので、話を聞くことができません。
         <br>
-        異なっていると思われるパラメータについて自分の設定を修正しネイバーを確立してください。
+        もし異なっていると思われるパラメータが存在するならば、CSR1の設定を修正してネイバー確立を試みてください。
         <br>
         <br>
         トラブルシューティングのヒント
@@ -69,20 +71,27 @@ prompt: |
         <br>
         telnet情報
         <br>
-        - CSR1 : admin/password
+        - CSR1 : user/password
         <br>
-        - CSR2 : admin/password
+        - CSR2 : user/password
         <br>
-        - CSR3 : admin/password
+        - CSR3 : user/password
         <br>
         <br>
-        CSR2,CSR3についてはtelnetを行うことによって show ip route と一部のshowコマンドを実行することができます。
+        CSR2,CSR3については設定を行うことはできませんが、CSR1からtelnetを行うことによって show ip route など一部のshowコマンドを実行することができます。
         <br>
         <br>
         (*1) 本問題ではCSR2,CSR3に接続されているネットワークを再現するためにLoopback interfaceを使用しています。
         <br>
         <br>
         ・解答：CSR1のshow running-config,CSR1，2，3のshow ip routeの出力
+        <br>
+        <br>
+        (*1) 本問題ではCSR2,CSR3に接続されているネットワークを表現するためにLoopback interfaceを使用しています。
+        <br>
+        (*2) CSR2,CSR3からCSR1へアドバタイズされないルートが存在しますが、不具合ではありません。
+        <br>
+        (*3) 本問題ではvnc serverをPPPoEルータとみなしています。
         <br>
         <br>
         ### 問題環境の情報はpstateにて取得してください

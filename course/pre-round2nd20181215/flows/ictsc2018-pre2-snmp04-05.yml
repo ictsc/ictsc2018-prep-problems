@@ -44,6 +44,8 @@ groups:
     # them from other files, as below
 
     -
+        {{ indented_include("questions/pre2-snmp04.yml", 8) }}
+    -
         {{ indented_include("questions/pre2-snmp05.yml", 8) }}
 
 

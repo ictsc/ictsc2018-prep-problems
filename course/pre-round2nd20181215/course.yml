@@ -119,12 +119,11 @@ chunks:
         | :-:        | :--                                            | --:       |
         | 1          | [Infrastructure](flow:ictsc2018-pre2-infra)    | xxx       |
         | 2          | [Cost](flow:ictsc2018-pre2-cost-calc)          | xxx       |
-        | 3          | [Network](flow:ictsc2018-pre2-etc)             | xxx       |
-        | 4          | [Packet Filter](flow:ictsc2018-pre2-filter)    | xxx       |
-        | 5-1        | [SNMP](flow:ictsc2018-pre2-snmp01-03)          | xxx       |
-        | 5-2        | [SNMP](flow:ictsc2018-pre2-snmp04-05)          | xxx       |
+        | 3          | Network                                        | xxx       |
+        | 4          | Packet Filter(flow:ictsc2018-pre2-filter)      | xxx       |
+        | 5          | [SNMP](flow:ictsc2018-pre2-snmp)               | xxx       |
         | 6          | [routing](flow:ictsc2018-pre2-routing)         | xxx       |
-        | 7          | [Linux](flow:ictsc2018-pre2-linux)         | xxx       |
+        | 7          | Linux                                          | xxx       |
         <br />
         
         ## Q&A
@@ -139,6 +138,8 @@ chunks:
         
         問題に修正があった場合はここに追記していきます。
         メールでの通知は行いません。
+        <br />
+
         | 時刻 | 問題ID | 内容 |
-        | :-- | :-- | :-- |
+        | :-- | :--    | :-- |
         | 00:00 | 共通 | ～～～を修正しました。 |

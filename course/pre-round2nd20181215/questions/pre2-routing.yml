@@ -41,7 +41,7 @@ prompt: |
         <br>
         - ネイバーIP : 10.0.0.3
         <br>
-        - remote AS : 65000
+        - remote AS : 65002
         <br>
         - 認証なし
         <br>

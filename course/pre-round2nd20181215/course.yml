@@ -117,14 +117,16 @@ chunks:
         
         | Problem ID | Problem name                                   | Full mark |
         | :-:        | :--                                            | --:       |
-        | 1          | [Infrastructure](flow:ictsc2018-pre2-infra)    | xxx       |
-        | 2          | [Cost](flow:ictsc2018-pre2-cost-calc)          | xxx       |
-        | 3          | [Network](flow:ictsc2018-pre2-etc)             | xxx       |
-        | 4          | [Packet Filter](flow:ictsc2018-pre2-filter)    | xxx       |
-        | 5-1        | [SNMP](flow:ictsc2018-pre2-snmp01-03)          | xxx       |
-        | 5-2        | [SNMP](flow:ictsc2018-pre2-snmp04-05)          | xxx       |
-        | 6          | [routing](flow:ictsc2018-pre2-routing)         | xxx       |
-        | 7          | [Linux](flow:ictsc2018-pre2-linux)             | xxx       |
+        | 1          | [Infrastructure](flow:ictsc2018-pre2-infra)    | 120       |
+        | 2          | [Cost](flow:ictsc2018-pre2-cost-calc)          | 100       |
+        | 3          | [Network](flow:ictsc2018-pre2-etc)             | 100       |
+        | 4          | [Packet Filter](flow:ictsc2018-pre2-filter)    | 100       |
+        | 5-1        | [SNMP](flow:ictsc2018-pre2-snmp01-03)          |  40       |
+        | 5-2        | [SNMP](flow:ictsc2018-pre2-snmp04-05)          |  80       |
+        | 6          | [routing](flow:ictsc2018-pre2-routing)         | 120       |
+        | 7          | [Linux](flow:ictsc2018-pre2-linux)             | 100       |
+        | 9          | Docker                                         | 120       |
+        | 10         | Web                                            | 120       |
         <br />
         
         ## Q&A
